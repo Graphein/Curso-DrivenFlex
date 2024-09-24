@@ -1,0 +1,18 @@
+.p1
+{
+    font-weight: bold;
+    color: orange;
+}
+.p2
+{
+
+    font-style: italic;
+    color: orange;
+}
+.p3
+{
+
+    font-weight: bold;
+    font-style: italic;
+    color: orange;
+}

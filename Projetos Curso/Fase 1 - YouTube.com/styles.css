@@ -1,6 +1,6 @@
 body{
 
-    background-color:#0F0F0F;
+    background-color:#FFFFFF
 }
 h1{
 
@@ -22,27 +22,83 @@ a{
     color: white;
 
 }
+
 .topo
 {
-    height: 50px;
-    margin-left: 80px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aqua;
+}
+.logo
+{
+
+    height: 40px;
+    width: 50px;
+    background-color: yellow;
+}
+.busca
+{
+
+    height: 40px;
+    width: 250px;
+    background-color: orange;
+}
+.opcao
+{
+
+    height: 40px;
+    width: 150px;
+    background-color: grey
+
+}
+.menu-lateral
+{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.botao-menu
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.img-menu
+{
+
+    width: 30px;
+    height: 30px;
 }
 .youtube
 {
     font-size: 50px;
-    background-color: red;
+}
+.recomendado{
+
+    background-color: blueviolet;
 }
 .recomendados-titulo
 {
+    margin-top: 40px;
     margin-left: 80px;
 }
 .video{
 
-    margin-left: 80px;
+    margin-top: 40px;
+    margin-left: 45px;
     background-color: blue;
 }
 .videos
 {
     display: flex;
     flex-wrap: wrap;
+}
+.conteudo
+{
+
+    display: flex;
 }

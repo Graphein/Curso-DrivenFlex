@@ -1,0 +1,15 @@
+.red {
+  background-color: red;
+  width: 800px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.caixa {
+  background: lavender;
+  border: 1px solid black;
+  width: 130px;
+  height: 130px;
+  justify-content: center;
+}

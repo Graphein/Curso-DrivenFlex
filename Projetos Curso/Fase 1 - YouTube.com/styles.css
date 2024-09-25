@@ -30,6 +30,7 @@ a{
 .youtube
 {
     font-size: 50px;
+    background-color: red;
 }
 .recomendados-titulo
 {
@@ -38,4 +39,10 @@ a{
 .video{
 
     margin-left: 80px;
+    background-color: blue;
+}
+.videos
+{
+    display: flex;
+    flex-wrap: wrap;
 }

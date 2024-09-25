@@ -1,0 +1,20 @@
+div {
+    width: 500px;
+    background: lightgray;
+    padding: 20px;
+    margin: 20px;
+  }
+
+  p {
+    margin: 10px;
+    background: cyan;
+    width: 150px;
+    height: 150px;
+  }
+  .lado {
+    display: flex;
+  }
+  .esmagar {
+    display: flex;
+    flex-wrap: wrap;
+  }

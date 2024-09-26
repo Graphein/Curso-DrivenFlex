@@ -4,53 +4,74 @@ body{
 }
 h1{
 
-    color: white;
     font-size: 20px;
+}
+a
+{
+    font-size: 15px;
     font-weight: bold;
 }
-p{
-
-    color:white;
-}
-img{
-
-    width: 400px;
-}
-a{
-
-    text-decoration: none;
-    color: white;
-
-}
-
 .topo
 {
-    height: 60px;
+    height: 85px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: aqua;
 }
-.logo
-{
+.Menu{
 
-    height: 40px;
-    width: 50px;
-    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
-.busca
-{
+.Menu > img{
 
+    
+    margin-left: 25px;
+    width: 40px;
     height: 40px;
-    width: 250px;
-    background-color: orange;
 }
-.opcao
+.separador-vertical
 {
+    
+    margin-left: 25px;
+    height: 50px;
+    background-color: black;
+    width: 2px;
+}
+.logo{
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.logo > img{
+
+    width: 40px;
     height: 40px;
-    width: 150px;
-    background-color: grey
+    object-fit: cover
+}
+.icon-youtube > img
+{
+    width: 40px;
+    height: 40px;
+    justify-content: flex-start
+
+}
+.opcao > img
+{
+    
+    margin-right: 50px;
+    width: 40px;
+    height: 40px;
+}
+.perfil
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%
 
 }
 .menu-lateral
@@ -67,7 +88,12 @@ a{
     align-items: center;
     margin-bottom: 40px;
 }
-.img-menu
+.botao-menu:hover
+{
+    cursor: pointer;
+    
+}
+.botao-menu img
 {
 
     width: 30px;
@@ -79,7 +105,7 @@ a{
 }
 .recomendado{
 
-    background-color: blueviolet;
+    background-color: rgb(255, 255, 255);
 }
 .recomendados-titulo
 {
@@ -89,13 +115,19 @@ a{
 .video{
 
     margin-top: 40px;
-    margin-left: 45px;
-    background-color: blue;
+    margin-left: 35px;
 }
 .videos
 {
     display: flex;
     flex-wrap: wrap;
+
+}
+.video > img
+{
+
+    width: 400px;
+    
 }
 .conteudo
 {

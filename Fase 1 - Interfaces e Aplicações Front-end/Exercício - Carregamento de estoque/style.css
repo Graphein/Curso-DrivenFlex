@@ -1,0 +1,31 @@
+body {
+    background-color: #fafafa;
+    margin: 0;
+  }
+  
+  .parede {
+    background-color: #ccaa99;
+    display: flex;
+    height: 720px;
+    flex-direction: column-reverse;
+  }
+  
+  .caixas {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .caixa {
+    width: 50px;
+    height: 50px;
+    background-color: #885544;
+    border: 2px solid black;
+    
+  }
+  
+  .chao {
+    background-color: #333;
+    border-top: 1px solid black;
+    height: 50px;
+  }
+  

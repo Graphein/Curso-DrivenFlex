@@ -60,15 +60,24 @@ a
     justify-content: flex-start
 
 }
+.opcao
+{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .opcao > img
 {
-    
-    margin-right: 50px;
+
+    margin-left: 50px;
     width: 40px;
     height: 40px;
 }
 .perfil
 {
+
+    margin-right: 20px;
     width: 40px;
     height: 40px;
     border-radius: 50%

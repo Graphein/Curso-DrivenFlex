@@ -235,3 +235,9 @@ body {
     left: 817px;
     top: 1128px;
 }
+.main
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+}

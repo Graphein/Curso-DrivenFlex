@@ -143,3 +143,15 @@ a
 
     display: flex;
 }
+@media ( max-width: 600px)
+{
+
+    .menu-lateral
+    {
+        display: none;
+    }
+    .video
+    {
+        justify-content: center;
+    }
+}

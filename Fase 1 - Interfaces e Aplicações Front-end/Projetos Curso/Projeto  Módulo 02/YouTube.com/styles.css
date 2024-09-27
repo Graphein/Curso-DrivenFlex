@@ -1,0 +1,145 @@
+body{
+
+    background-color:#FFFFFF
+}
+h1{
+
+    font-size: 20px;
+}
+a
+{
+    font-size: 15px;
+    font-weight: bold;
+}
+.topo
+{
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Menu{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.Menu > img{
+
+    
+    margin-left: 25px;
+    width: 40px;
+    height: 40px;
+}
+.separador-vertical
+{
+    
+    margin-left: 25px;
+    height: 50px;
+    background-color: black;
+    width: 2px;
+}
+.logo{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.logo > img{
+
+    width: 40px;
+    height: 40px;
+    object-fit: cover
+}
+.icon-youtube > img
+{
+    width: 40px;
+    height: 40px;
+    justify-content: flex-start
+
+}
+.opcao
+{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.opcao > img
+{
+
+    margin-left: 50px;
+    width: 40px;
+    height: 40px;
+}
+.perfil
+{
+
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%
+
+}
+.menu-lateral
+{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.botao-menu
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.botao-menu:hover
+{
+    cursor: pointer;
+    
+}
+.botao-menu img
+{
+
+    width: 30px;
+    height: 30px;
+}
+.youtube
+{
+    font-size: 50px;
+}
+.recomendado{
+
+    background-color: rgb(255, 255, 255);
+}
+.recomendados-titulo
+{
+    margin-top: 40px;
+    margin-left: 80px;
+}
+.video{
+
+    margin-top: 40px;
+    margin-left: 35px;
+}
+.videos
+{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.video > img
+{
+
+    width: 400px;
+    
+}
+.conteudo
+{
+
+    display: flex;
+}

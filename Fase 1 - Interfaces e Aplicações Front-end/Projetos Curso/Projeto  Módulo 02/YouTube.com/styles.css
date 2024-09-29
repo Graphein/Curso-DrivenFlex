@@ -14,9 +14,14 @@ a
 .topo
 {
     height: 85px;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
 }
 .Menu{
 
@@ -142,6 +147,7 @@ a
 {
 
     display: flex;
+    margin-top: 85px;
 }
 @media ( max-width: 600px)
 {
@@ -153,5 +159,10 @@ a
     .video
     {
         justify-content: center;
+    }
+    .pesquisa
+    {
+
+        display: none;
     }
 }

@@ -1,7 +1,3 @@
-body {
-  margin: 0;
-}
-
 .docinho {
   width: 50vw;
 }
@@ -20,5 +16,5 @@ body {
 }
 .cremosidade {
   background-color: chocolate;
-	height: calc(100vh - 100px);
+  height: calc(100vh - 100px);
 }

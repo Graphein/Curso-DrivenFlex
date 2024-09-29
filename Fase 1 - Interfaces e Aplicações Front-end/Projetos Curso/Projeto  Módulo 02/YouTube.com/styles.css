@@ -1,6 +1,11 @@
+ * {
+
+    box-sizing: border-box;
+}
 body{
 
-    background-color:#FFFFFF
+    background-color:#FFFFFF;
+    
 }
 h1{
 
@@ -90,21 +95,28 @@ a
 }
 .menu-lateral
 {
+    margin-left: 10px;
     width: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid blue;
+    border-radius: 10px;
 }
 .botao-menu
 {
+    width: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
+    margin-top: 15px;
+    padding: 2px;
+    border-radius: 10px;
 }
 .botao-menu:hover
 {
     cursor: pointer;
+    background-color: #F2F2F2;
     
 }
 .botao-menu img
@@ -130,14 +142,14 @@ a
 
     margin-top: 40px;
     margin-left: 35px;
+
 }
 .videos
 {
     display: flex;
     flex-wrap: wrap;
-
 }
-.video > img
+.img
 {
 
     width: 400px;
@@ -148,6 +160,22 @@ a
 
     display: flex;
     margin-top: 85px;
+}
+.thumb
+{
+    position:relative;
+
+}
+.tempo-video
+{
+
+    background-color:#0C0B0C;
+    color: white;
+    width: 35px;
+    position: absolute;
+    bottom: 85px;
+    right: 5px;
+    font-family: 'Roboto', sans-serif;
 }
 @media ( max-width: 600px)
 {
@@ -160,6 +188,9 @@ a
     {
         justify-content: center;
     }
+}
+@media ( max-width: 900px)
+{
     .pesquisa
     {
 

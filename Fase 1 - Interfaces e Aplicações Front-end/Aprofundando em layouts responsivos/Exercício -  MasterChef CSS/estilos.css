@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+}
+
+.docinho {
+  width: 50vw;
+}
+.crocancia {
+  background-color: burlywood;
+  height: 50px;
+}
+.topo {
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+.base {
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.cremosidade {
+  background-color: chocolate;
+	height: calc(100vh - 100px);
+}

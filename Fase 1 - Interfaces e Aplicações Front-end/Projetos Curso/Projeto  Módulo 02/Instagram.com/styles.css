@@ -1,0 +1,136 @@
+ * {
+
+    box-sizing: border-box;
+}
+.cabeçalho
+{
+    position: relative;
+    width: 100vw;
+}
+.topo-logo
+{
+    position: fixed;
+    background-color: #FFFFFF;
+    width: 100%;
+    border: 1px solid #DBDBDB;
+    height: 54px;
+    display: flex;
+    justify-content: space-between; 
+}
+.topo-logo > img
+{
+    width: 150px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.menu-direita
+{
+    background-color: #FFFFFF;
+    width: 200px;
+    height: 54x;
+    align-items: center;
+    display: flex;
+    justify-content: space-between; 
+    padding: 10px;
+    margin-right: 250px;
+}
+.menu-direita > ion-icon
+{
+    height: 22px;
+    width: 22px;
+
+}
+.menu-esquerda
+{
+    display: flex;
+    background-color: red;
+    height: 950px;
+    width: 20%;
+    border: 1px solid #DBDBDB;
+}
+.icons
+{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15%;
+
+}
+.icons> ion-icon
+{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    
+}
+.home
+{
+    height: 40px;
+    width: 40px;
+    padding: 15px;
+
+}
+.search
+{
+    height: 40px;
+    width: 40px;
+    padding: 15px;
+}
+.Explorar
+{
+    height: 40px;
+    width: 40px;
+    padding: 15px;
+}
+.Mensagens
+{
+    height: 40px;
+    width: 40px;
+    padding: 15px;
+}
+.Notificações
+{
+    height: 40px;
+    width: 40px;
+    padding: 15px;
+}
+.Criar
+{
+    height: 40px;
+    width: 40px;
+    padding: 15px;
+}
+.Perfil
+{
+    height: 40px;
+    width: 40px;
+    padding: 15px;
+}
+.Mais
+{
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    margin-top: 150px;
+}
+.link {
+    margin-left: 8px; 
+    text-decoration: none;
+    color: black; 
+}
+.main
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+}
+.conteudo
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    background-color:rebeccapurple;
+    
+}

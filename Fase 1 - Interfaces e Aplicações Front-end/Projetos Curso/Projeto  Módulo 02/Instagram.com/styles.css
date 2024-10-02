@@ -30,12 +30,13 @@
 {
     background-color: #FFFFFF;
     width: 200px;
+    position: absolute;
+    right: 330px;
     height: 54x;
     align-items: center;
     display: flex;
     justify-content: space-between; 
     padding: 10px;
-    margin-right: 150px;
 }
 .menu-direita > ion-icon
 {
@@ -155,50 +156,82 @@
     border: 1px solid #DBDBDB;
     border-radius: 3px;
 }
-.story 
-{
-    
+.story {
+    margin-top: 15px;
     display: flex;
-    flex-direction: row; 
-    justify-content: space-around;
-    width: 614px;
-    margin-left: 20px;
+    flex-direction: row;
+    width: 614px;  /* Largura fixa para controlar o overflow */
+    height: 118px;
+    overflow: hidden;  /* Para ocultar o último story parcialmente */
+    margin-left: 10px;
 }
 
-.story-background 
-{
+.story-background {
+    position: relative; /* Contêiner para posicionar os elementos */
+    width: 66px; /* Tamanho fixo para o story */
+    height: 66px; /* Tamanho fixo para o story */
+    margin-right: 15px; /* Espaço padrão entre os stories */
     display: flex;
-    flex-direction: column; 
-    justify-content: center; 
+    flex-direction: column;
+    align-items: center; /* Centraliza as imagens e o texto */
 }
 
-.story-background > img 
-{
-    width: 56px;
-    height: 56px;
-    cursor: pointer; 
+.background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 66px;  /* Garante que o background ocupe todo o espaço */
+    height: 66px; /* Garante que o background ocupe todo o espaço */
 }
 
-.txt 
-{
-    margin-top: 10px; 
+.story-img {
+    position: absolute;
+    border-radius: 50%;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta o alinhamento para o centro */
+    width: 56px; /* Tamanho ajustado para a imagem principal */
+    height: 56px; /* Tamanho ajustado para a imagem principal */
+    z-index: 1; /* Garante que a imagem principal fique sobre o fundo */
+}
+.txt {
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 0px;
     font-size: 14px;
-    color: #000;
     text-align: center;
+    color: #000;
+    white-space: nowrap; /* Impede que o texto quebre linha */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adiciona '...' para nomes longos */
 }
-.passar-direita 
-{
-    position: absolute; 
-    top: 50px;
-    left: 570px;
-    transform: translateY(-50%);
+/* Para criar o efeito de overflow no último story */
+.story-background:last-child {
+    margin-right: -50px; /* Negativo para criar o efeito de corte no último story */
 }
-.passar-direita>ion-icon
+.txt1
 {
-    font-size: 30px; 
-    color: #000;     
-    cursor: pointer; 
-    padding: 15px;
+    position: absolute;
+    margin-top: 70px;
+    margin-right: 15px;
+    font-size: 14px;
+    text-align: center;
+    color: #000;
+    white-space: nowrap; /* Impede que o texto quebre linha */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adiciona '...' para nomes longos */
+}
+.txt2
+{
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 5px;
+    font-size: 14px;
+    text-align: center;
+    color: #000;
+    white-space: nowrap; /* Impede que o texto quebre linha */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adiciona '...' para nomes longos */
 }
 .feed 
 {
@@ -378,7 +411,7 @@ h3
 
     display: flex;
     position: absolute;
-    width: 300px;
+    width: 293px;
     height: 400px;
     margin-top: 150px;
     margin-left: 20px;
@@ -518,6 +551,25 @@ h3
     color: #139EF2;
     cursor: pointer; 
 }
+.direitos
+{
+
+    position: absolute;
+    color:#C7C7C7;
+    margin-left: 10px;
+    font-size: 11px;
+    cursor: pointer;
+    margin-top: 320px;
+}
+.coppyright
+{
+    position: absolute;
+    color: #C7C7C7;
+    margin-left: 10px;
+    font-size: 11px;
+    cursor: pointer;
+    margin-top: 380px;
+}
 .menu-mobile
 {
     display: flex;
@@ -552,9 +604,11 @@ h3
 
         display: none;
     }
-    .menu-esquerda
+    .menu-direita
     {
-        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 }
 @media (max-width: 614px) {
@@ -585,13 +639,14 @@ h3
         align-items: center; 
         justify-content: center; 
     }
-    .passar-direita
-    {
-        display: none;
-    }
     .conteudo
     {
-        background-color: white;
+        margin-top: 25px;
+        background-color: #FAFAFA;
         border: none;
+    }
+    .feed
+    {
+        margin-top: 115px;
     }
 }

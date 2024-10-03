@@ -9,8 +9,9 @@
     display: flex;
     width: 100%;
     border: 1px solid #DBDBDB;
+    background-color: #FFFFFF;
     height: 54px;
-    
+    z-index: 1;
 }
 .topo-logo
 {
@@ -39,7 +40,7 @@
     position: absolute;
     border: 0;
     right: 0;
-    height: 54x;
+    height: 54px;
     align-items: center;
     display: flex;
     justify-content: space-between; 
@@ -66,7 +67,7 @@
     justify-content: center; 
     width: 100%; 
     padding: 0 20px; 
-    
+    z-index: 1;
 }
 
 .instagram {
@@ -77,32 +78,31 @@
     margin-top: 80px;
 
 }
-.story 
-{
-
+.story {
     display: flex;
+    overflow-x: hidden; /* Esconde o último story parcialmente */
     border: 1px solid #DBDBDB;
     border-radius: 3px;
-    display: flex;
     flex-direction: row;
     width: 614px;
     max-width: 614px;
     height: 118px;
 
+    padding: 10px;
+    padding-right: 50px; /* Corta o último story, deixando parte dele visível */
+    position: relative;
 }
 
-.story-background 
-{
-
-    margin-top: 10px;
-    margin-left: 15px;
-    width: 66px;  
-    height: 66px;
+.story-background {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    
+    width: 80px; /* Largura fixa para cada story */
+    flex-shrink: 0; /* Evita que os stories encolham */
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .background-img 
@@ -508,30 +508,11 @@ h3
     cursor: pointer;
     margin-top: 380px;
 }
-.menu-mobile
-{
-    display: flex;
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 50px;
-    position: fixed;
-    justify-content: space-between;
-    text-align: center;
-    padding: 10px;
-    bottom: 0;
-}
-.menu-mobile > ion-icon
-{
-    height: 30px;
-    width: 30px;
-    cursor: pointer; 
-}
 @media ( max-width: 2000px)
 {
-    .menu-mobile{
-
+    .menu-mobile
+    {
         display: none;
-
     }
     .menu-direita
     {
@@ -541,13 +522,17 @@ h3
 @media ( max-width: 935px)
 {
 
+    .menu-mobile
+    {
+        display: none;
+    }
     .lateral-direita {
         display: none; 
     }
     
     .menu-direita {
         position: absolute;
-        margin-right:100px;
+        margin-right:80px;
     }
     
     .conteudo {
@@ -565,41 +550,52 @@ h3
     }
 }
 @media (max-width: 614px) {
-    .post
-    {
+    .post {
         width: 100%;
     }
-    .menu-direita
-    {
+    .menu-direita {
         display: none;
     }
-    .menu-mobile 
-    {
-        display: flex; 
-        position: fixed;
-        justify-content: space-between; 
+    .menu-mobile {
+        display: flex;
         background-color: rgb(255, 255, 255);
         width: 100%;
         max-width: 614px;
-        border: 0;
-        right: 0;
+        height: 50px;
+        position: fixed;
+        bottom: 0; 
+        left: 0;
+        justify-content: space-between;
+        z-index: 2; 
+        border-top: 1px solid #DBDBDB;
+        transition: transform 0.3s ease-in-out;
     }
-    .topo-logo
-    {
+    .menu-mobile > ion-icon {
+        height: 30px;
+        width: 30px;
+        cursor: pointer; 
+        padding: 10px;
+    }
+    .topo-logo {
         display: flex;
         flex-direction: column;
         align-items: center; 
         justify-content: center; 
     }
-    .story
-    {
-        overflow: none;
-        border: none;
+    .story {
+        width: 100%;
+        max-width: 614px;
         display: flex;
-        justify-content: center; /* Centraliza os stories na linha */
+        left: 0;
+        justify-content: center; 
+        margin-left: 100px;
     }
-    .feed
+    .story-background
     {
+        max-width: 614px;
+        overflow: visible;
+    }
+    .feed {
         margin-top: 120px;
     }
     .conteudo {
@@ -607,14 +603,12 @@ h3
         position: absolute;
         max-width: 614px; 
         justify-content: center; 
-
     }
-    
     .instagram {
         display: flex;
-        max-width: 614px; 
-        margin-right: 150px; 
+        max-width: 614px;
+        width: 100%;
+        margin-right: 140px; 
         overflow: none;
     }
-
 }

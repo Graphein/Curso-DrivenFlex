@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  #website {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - 30px);
+  }
+  
+  .conteudo {
+    width: 1000px;
+    max-width: 100%;
+  }
+  
+  .titulo {
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead tr:first-child {
+    font-weight: bold;
+  }
+  
+  td {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  td:last-child {
+    width: 140px;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  button {
+    padding: 12px 14px 8px;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  button.excluir {
+    background-color: rgb(206, 19, 19);
+  }
+  
+  button.excluir:hover {
+    background-color: rgb(179, 15, 15);
+  }
+  
+  button.editar {
+    background-color: #1f1f1f;
+  }
+  
+  button.editar:hover {
+    background-color: #111111;
+  }
+  
+  .adicionar-item {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  button.adicionar {
+    background-color: #28a745;
+    width: 108px;
+    margin-right: 16px;
+  }
+  

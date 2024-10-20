@@ -6,7 +6,12 @@
     <title>DrivenEats</title>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="styles.css">    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .selecionado {
+            border: 3px solid green; /* Borda verde quando selecionado */
+        }
+    </style>
 </head>
 <body>
     <div class="conteudo">
@@ -17,72 +22,85 @@
         <br>
         <h3 class="primeiro-prato">Primeiro, seu prato</h3>
         <div class="opcao-prato">
-            <div class="prato-um">
+            <div class="prato-um opcao" onclick="selecionarItem(this, 'prato')">
                 <img src="./Img/pf_frango.jpg">
                 <h4 class="nomeprato">Frango Yin Yang</h4>
                 <h5 class="descriçãoprato">Um pouco de batata,<br>um pouco de salada</h5>
-                <h6 class="valor">14.90</h6>
+                <h6 class="valor">29.90</h6>
             </div>
-            <div class="prato-dois">
+            <div class="prato-dois opcao" onclick="selecionarItem(this, 'prato')">
                 <img src="./Img/pf_carne.jpg">
                 <h4 class="nomeprato">Carne Yin Yang</h4>
                 <h5 class="descriçãoprato">Um pouco de batata,<br>um pouco de salada</h5>
-                <h6 class="valor">14.90</h6>
+                <h6 class="valor">24.90</h6>
             </div>
-            <div class="prato-tres">
+            <div class="prato-tres opcao" onclick="selecionarItem(this, 'prato')">
                 <img src="./Img/pf_calabresa.png">
                 <h4 class="nomeprato">Calabresa Yin Yang</h4>
                 <h5 class="descriçãoprato">Um pouco de batata,<br>um pouco de salada</h5>
-                <h6 class="valor">14.90</h6>
+                <h6 class="valor">22.90</h6>
             </div>
         </div>
+
         <h3 class="primeiro-bebida">Agora, sua bebida</h3>
         <div class="opcao-bebida">
-            <div class="bebida-um">
+            <div class="bebida-um opcao" onclick="selecionarItem(this, 'bebida')">
                 <img src="./Img/coca.png">
                 <h4 class="nomeprato">Coquinha gelada</h4>
                 <h5 class="descriçãoprato">Lata 350ml</h5>
                 <h6 class="valor">4.90</h6>
             </div>
-            <div class="bebida-dois">
+            <div class="bebida-dois opcao" onclick="selecionarItem(this, 'bebida')">
                 <img src="./Img/fanta.png">
                 <h4 class="nomeprato">Fanta Gelada</h4>
                 <h5 class="descriçãoprato">Lata 350ml</h5>
-                <h6 class="valor">4.90</h6>
+                <h6 class="valor">3.90</h6>
             </div>
-            <div class="bebida-tres">
+            <div class="bebida-tres opcao" onclick="selecionarItem(this, 'bebida')">
                 <img src="./Img/suco.png">
                 <h4 class="nomeprato">Suco</h4>
                 <h5 class="descriçãoprato">350ml</h5>
-                <h6 class="valor">4.90</h6>
+                <h6 class="valor">9.90</h6>
             </div>
         </div>
+
         <h3 class="primeira-sobremesa ">Por fim, sua sobremesa</h3>
         <div class="opcao-sobremesa">
-            <div class="sobremesa-um">
+            <div class="sobremesa-um opcao" onclick="selecionarItem(this, 'sobremesa')">
                 <img src="./Img/mouse.jpg">
                 <h4 class="nomeprato">Mouse</h4>
                 <h5 class="descriçãoprato">Apenas Mouse</h5>
-                <h6 class="valor">7.90</h6>
+                <h6 class="valor">9.90</h6>
             </div>
-            <div class="sobremesa-dois">
+            <div class="sobremesa-dois opcao" onclick="selecionarItem(this, 'sobremesa')">
                 <img src="./Img/brownie.jpg">
                 <h4 class="nomeprato">Brownie</h4>
                 <h5 class="descriçãoprato">Apenas Brownie </h5>
                 <h6 class="valor">7.90</h6>
             </div>
-            <div class="sobremesa-tres">
+            <div class="sobremesa-tres opcao" onclick="selecionarItem(this, 'sobremesa')">
                 <img src="./Img/pudim.jpg">
                 <h4 class="nomeprato">Pudim</h4>
                 <h5 class="descriçãoprato">Apenas pudim</h5>
-                <h6 class="valor">7.90</h6>
+                <h6 class="valor">5.90</h6>
             </div>
         </div>
+
         <div class="ajuste">
             <div class="compra">
-                <button class="botão">Selecione os 3 itens<br>
-                    para fechar o pedido</button>
+                <button class="botão" onclick="abrirModal()"><a class="white">Fechar Pedido</a></button>
             </div>
+        </div>
+    </div>
+    <div class="overlay" id="modal">
+        <div class="modal">
+            <h2>Confirme seu pedido</h2>
+            <p id="prato-selecionado"></p>
+            <p id="bebida-selecionada"></p>
+            <p id="sobremesa-selecionada"></p>
+            <p><strong>TOTAL: <span id="total"></span></strong></p>
+            <button class="confirmar" onclick="confirmarPedido()">Tudo certo, pode pedir!</button>
+            <button class="cancelar" onclick="fecharModal()">Cancelar</button>
         </div>
     </div>
     <script src="script.js"></script>

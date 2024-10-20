@@ -1,25 +1,25 @@
 * {
-    box-sizing: border-box; /* Garante que padding/border sejam incluídos no tamanho total dos elementos */
+    box-sizing: border-box; 
     margin: 0;
     padding: 0;
 }
 
 html, body {
-    max-width: 100%; /* Impede que o corpo exceda a largura da tela */
-    overflow-x: hidden; /* Esconde qualquer overflow horizontal */
+    max-width: 100%;
+    overflow-x: hidden; 
 }
 
 .conteudo {
-    width: 100%; /* Ajustado para usar 100% da tela */
+    width: 100%; 
     max-width: 414px;
     height: 100%;
     background-color: #EEEEEE;
-    overflow-x: hidden; /* Previne rolagem horizontal na seção de conteúdo */
+    overflow-x: hidden; 
 }
 
 .DrivenEats {
     position: fixed;
-    width: 100%; /* Ajustado para usar 100% da tela */
+    width: 100%; 
     max-width: 414px;
     height: 92px;
     padding-top: 20px;
@@ -66,7 +66,7 @@ html, body {
     overflow-x: scroll;
     gap: 15px;
     padding-bottom: 15px;
-    padding-left: 14px; /* Alinhamento melhorado dos itens */
+    padding-left: 14px; 
 }
 
 .primeiro-prato {
@@ -132,25 +132,82 @@ html, body {
     margin-top: 90px;
 }
 .compra {
-    position: fixed; /* Fixa a div na tela */
+    position: fixed; 
 
-    bottom: 0px; /* Posiciona a div 20px acima da parte inferior da tela */
-    left: 0; /* Posiciona a div na borda esquerda da tela */
-    width: 100%; /* Faz a div ocupar toda a largura da tela */
-    max-width: 414px; /* Limita a largura máxima a 414px */
+    bottom: 0px; 
+    left: 0; 
+    width: 100%; 
+    max-width: 414px; 
     background-color: white;
     height: 92px;
-    padding: 0 15px; /* Adiciona padding lateral para alinhamento */
+    padding: 0 15px; 
 }
 .botão {
     margin-top: 15px;
     background-color: #CBCBCB;
-    width: 100%; /* Faz o botão ocupar toda a largura da div */
+    width: 100%; 
     height: 61px;
     border-radius: 50px;
+    border: white;
     font-size: 20px;
-    text-align: center; /* Centraliza o texto no botão */
+    text-align: center; 
 }
+.white
+{
+    color: white;
+}
+
 .selecionado {
-    border-color: green; /* Borda verde quando o item estiver selecionado */
+    border-color: green; 
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 414px;
+    height: 100%;
+    background-color: #FFFFFFE5;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background: #50d074;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.modal h2 {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 22px;
+}
+
+.modal p {
+    margin: 10px 0;
+    color: white;
+}
+
+.modal button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal .confirmar {
+    background-color: rgb(255, 255, 255);
+    color: green;
+    border-radius: 50px;
+}
+
+.modal .cancelar {
+    background: #50d074;
+    color: white;
 }

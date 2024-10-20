@@ -1,0 +1,257 @@
+.conteudo
+{
+
+    width: 414px;
+    max-width: 414px;
+    height: 1026px;
+    background-color: #EEEEEE;
+}
+.DrivenEats
+{
+    position: fixed;
+    width: 414px;
+    height: 92px;
+    padding-top: 20px;
+    background-color: #CF2B2B;
+}
+.DrivenEats > h1
+{
+    color: white;
+    font-size: 44px;
+    margin-left: 20px;
+}
+.DrivenEats > h2{
+    color: white;
+    font-size: 18px;
+    margin-left: 20px;
+}
+.nomeprato{
+    font-size: 16px;
+    color: #333333;
+    margin-left: 14px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.descriçãoprato
+{
+    font-size: 15px;
+    color: #333333;
+    margin-left: 14px;
+    font-weight: #A6A6A6;
+    margin-top: 5px;
+}
+.valor
+{
+    font-size: 16px;
+    color: #333333;
+    margin-left: 14px;
+    font-weight: #000000;
+    margin-top: 15px;
+    font-weight: bold;
+}
+.opcao-prato
+{
+    display: flex;
+    justify-content: space-between;
+    max-width: 414px;
+    width: 414px;
+    height: 250px;
+
+}
+.primeiro-prato{
+
+    margin-top: 123px;
+    width: 250px;
+    height: 25px;
+    color: #333333;
+    font-size: 26px;
+    margin-left: 14px;
+    font-weight: bold;
+}
+.prato-um
+{
+    margin-top: 15px;
+    width: 172px;
+    height: 216px;
+    border-radius: 9px;
+    background-color: white;
+    margin-left: 14px;
+}
+.prato-um > img{
+    width: 144px;
+    height: 87px;
+    margin-top: 5px;
+    margin-left: 14px;
+}
+.prato-dois
+{
+    margin-top: 15px;
+    width: 172px;
+    height: 216px;
+    border-radius: 9px;
+    background-color: white;
+    margin-left: 25px;
+}
+.prato-dois > img{
+    width: 144px;
+    height: 87px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.prato-tres
+{
+    margin-top: 15px;
+    width: 172px;
+    height: 216px;
+    border-radius: 9px;
+    background-color: white;
+    margin-left: 15px;
+}
+.prato-tres > img{
+    width: 144px;
+    height: 87px;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+.primeiro-bebida{
+
+    width: 250px;
+    height: 25px;
+    color: #333333;
+    font-size: 26px;
+    margin-left: 14px;
+    font-weight: bold;
+}
+.opcao-bebida
+{
+    display: flex;
+    justify-content: space-between;
+    width: 414px;
+    height: 250px;
+}
+.bebida-um
+{
+    margin-top: 15px;
+    width: 172px;
+    height: 216px;
+    border-radius: 9px;
+    background-color: white;
+    margin-left: 14px;
+}
+.bebida-um > img{
+    width: 144px;
+    height: 87px;
+    margin-top: 5px;
+    margin-left: 14px;
+}
+.bebida-dois
+{
+    margin-top: 15px;
+    width: 172px;
+    height: 216px;
+    border-radius: 9px;
+    margin-left: 25px;
+    background-color: white;
+}
+.bebida-dois > img{
+    width: 144px;
+    height: 87px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.bebida-tres
+{
+    margin-top: 15px;
+    width: 172px;
+    height: 216px;
+    border-radius: 9px;
+    background-color: white;
+    margin-left: 15px;
+}
+.bebida-tres > img{
+    width: 144px;
+    height: 87px;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+.primeira-sobremesa 
+{
+    width: 250px;
+    height: 25px;
+    color: #333333;
+    font-size: 25px;
+    margin-left: 14px;
+    font-weight: bold;
+}
+.opcao-sobremesa
+{
+    display: flex;
+    justify-content: space-between;
+    width: 414px;
+    height: 100px;
+}
+.sobremesa-um
+{
+    margin-top: 15px;
+    width: 172px;
+    height: 197px;
+    border-radius: 9px;
+    background-color: white;
+    margin-left: 14px;
+}
+.sobremesa-um > img{
+    width: 144px;
+    height: 87px;
+    margin-top: 5px;
+    border-radius: 4px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+.sobremesa-dois
+{
+    margin-top: 15px;
+    width: 172px;
+    height: 197px;
+    border-radius: 9px;
+    margin-left: 25px;
+    background-color: white;
+}
+.sobremesa-dois > img{
+    width: 144px;
+    height: 87px;
+    margin-top: 5px;
+    border-radius: 4px;
+    margin-left: 4px;
+    margin-right: 5px;
+}
+.sobremesa-tres
+{
+    margin-top: 15px;
+    width: 172px;
+    height: 197px;
+    border-radius: 9px;
+    background-color: white;
+    margin-left: 15px;
+}
+.sobremesa-tres > img{
+    width: 144px;
+    height: 87px;
+    margin-top: 5px;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+.compra
+{
+    width: 414px;
+    height: 92px;
+    
+}
+.botão
+{
+    background-color: #CBCBCB;
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 364px;
+    height: 61px;
+    border-radius: 50px;
+}

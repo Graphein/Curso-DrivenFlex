@@ -158,7 +158,7 @@ html, body {
 }
 
 .selecionado {
-    border-color: green; 
+    border: 3px solid green; 
 }
 
 .overlay {

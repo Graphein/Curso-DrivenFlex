@@ -4,8 +4,10 @@ let selecao = {
     sobremesa: null
 };
 
-function selecionarItem(elemento, tipo) {
-    if (selecao[tipo]) {
+function selecionarItem(elemento, tipo) 
+{
+    if (selecao[tipo]) 
+    {
         selecao[tipo].classList.remove("selecionado");
     }
 
@@ -15,8 +17,10 @@ function selecionarItem(elemento, tipo) {
     verificarSelecoes();
 }
 
-function verificarSelecoes() {
-    if (selecao.prato && selecao.bebida && selecao.sobremesa) {
+function verificarSelecoes() 
+{
+    if (selecao.prato && selecao.bebida && selecao.sobremesa) 
+    {
         document.querySelector(".botão a").innerHTML = "Fechar Pedido";
         document.querySelector(".botão").style.backgroundColor = "green";
     } else {
@@ -26,7 +30,8 @@ function verificarSelecoes() {
 }
 
 function abrirModal() {
-    if (selecao.prato && selecao.bebida && selecao.sobremesa) {
+    if (selecao.prato && selecao.bebida && selecao.sobremesa) 
+    {
 
         const pratoNome = selecao.prato.querySelector('h4').innerText;
         const pratoPreco = selecao.prato.querySelector('h6').innerText;

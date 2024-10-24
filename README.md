@@ -22,7 +22,7 @@ Ao final do curso, os alunos terão trabalhado em projetos práticos que demonst
 
 O curso tem uma abordagem prática, com feedback constante e suporte da equipe da Driven, e é destinado a quem deseja entrar rapidamente no mercado de tecnologia, mesmo sem conhecimento prévio em programação.
 
-1 Fase - Desenvolvimento Front-end
+1º Fase - Desenvolvimento Front-end
 
 Módulo 01 - Construindo meu primeiro site com HTML e CSS ✔️
 

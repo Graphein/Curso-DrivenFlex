@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .caixa-do-contador {
+    background-color: #f0a202;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .contador {
+    font-family: "Montserrat", sans-serif;
+    color: #183059;
+    font-size: 4em;
+  }
+  
+  .rotulo {
+    font-family: "Montserrat", sans-serif;
+    color: #183059;
+    font-size: 1em;
+  }
+  
+button {
+    background-color: #276fbf;
+    border: none;
+    margin: 0;
+    padding: 20px;
+    width: auto;
+    overflow: visible;
+    cursor: pointer;
+    border-radius: 5px;
+  
+    /* inherit font & color from ancestor */
+    color: white;
+    font: inherit;
+  
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+  
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+  
+    /* Corrects inability to style clickable `input` types in iOS */
+}
+  

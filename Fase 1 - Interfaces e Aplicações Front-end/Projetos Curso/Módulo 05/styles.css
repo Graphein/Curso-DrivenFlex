@@ -1,0 +1,92 @@
+body {
+    background-color: #EEF9BF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-size: 56px;
+    color: #75B79E;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cartas1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; 
+    max-width: 80%;
+}
+
+.card {
+    width: 120px;
+    height: 150px;
+    position: relative;
+    margin: 10px;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    background-color: #A7E9AF;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all .5s;
+    transform-style: preserve-3d;
+}
+
+.back-face > img, .front-face > img {
+    width: 80px;
+    height: 80px;
+    margin-top: 5px;
+}
+
+.back-face {
+    transform: rotateY(180deg);
+}
+
+.card.flipped .back-face {
+    transform: rotateY(0deg);
+}
+
+.card.flipped .front-face {
+    transform: rotateY(-180deg);
+}
+@media ( max-width: 425px)
+{
+    h1{
+         font-size: 36px;
+         margin-top: 50px;
+    }
+}
+@media ( max-width: 375px)
+{
+    h1{
+         font-size: 30px;
+    }
+}
+@media ( max-width: 320px)
+{
+    h1{
+         font-size: 25px;
+    }
+}

@@ -24,22 +24,22 @@ O curso tem uma abordagem prática, com feedback constante e suporte da equipe d
 
 1º Fase - Desenvolvimento Front-end
 
-Módulo 01 - Construindo meu primeiro site com HTML e CSS ✔️
+Módulo 01 - Construindo meu primeiro site com HTML e CSS 
 
   - Desafio Final Projeto Globo.com ✔️
 
-Módulo 02 - Aprofundando em layouts responsivos ✔️
+Módulo 02 - Aprofundando em layouts responsivos 
 
   - Desafio Final Projeto Instagram ✔️
 
-Módulo 03 - Introdução à Lógica de Programação ✔️
+Módulo 03 - Introdução à Lógica de Programação 
 
   - Desafio Final Teste de Algoritmos e/ou Estruturas de Dados ✔️
 
-Módulo 04 - Adicionando interatividade com JavaScript ✔️
+Módulo 04 - Adicionando interatividade com JavaScript 
 
   - Desafio Final Projeto Driven Eats ✔️
 
-Módulo 05 - Aprofundando em manipulação de DOM ✔️
+Módulo 05 - Aprofundando em manipulação de DOM 
 
   - Desafio Final Projeto Parrot Card Game ✔️

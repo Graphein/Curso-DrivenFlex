@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto Mono", monospace;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 800px;
+  max-width: 100%;
+  padding: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #dddddd;
+}
+
+button {
+  background-color: #007bff;
+  padding: 14px;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.resposta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 500px;
+}
+
+.resposta * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 400px;
+  color: white;
+  object-fit: cover;
+}
+
+.resposta div {
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 2px 3px 3px #000000;
+}

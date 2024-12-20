@@ -1,0 +1,51 @@
+body {
+  font-family: sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.health {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.health img {
+  width: 20px;
+  height: 20px;
+}
+
+.health span {
+  font-weight: bold;
+  color: red;
+}
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(250, 232, 210);
+  border-radius: 10px;
+  box-shadow: 0 0 10px -8px black;
+  margin: 10px;
+}
+
+.profile {
+  width: 100px;
+  height: 100px;
+}
+span {
+  font-weight: bold;
+  text-align: center;
+}
+span.grass {
+  color: green;
+}
+span.water {
+  color: darkcyan;
+}
+span.fire {
+  color: firebrick;
+}

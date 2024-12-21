@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+}
+
+.conteúdo {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.topo {
+    position: absolute;
+    display: flex;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100px;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.topo > img {
+    width: 75px;
+    height: 53px;
+}
+
+.topo > ion-icon {
+    margin-top: 5px;
+    height: 53px;
+    width: 75px;
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+}
+
+.mensagem {
+    background-color: #F3F3F3;
+    height: 670px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 80px;
+    overflow-y: scroll; /* Permite rolar as mensagens */
+}
+
+.footer {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#msg::placeholder {
+    color: black;
+    font-size: 20px;
+}
+
+#msg {
+    font-size: 20px;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+
+.footer > ion-icon {
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.footer > input {
+    width: 90%;
+    height: 50px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    margin-left: 15px;
+    padding: 10px;
+}
+
+.publico {
+    margin-left: 25px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.modal {
+    background: white;
+    padding: 20px;
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.texto {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.icon-with-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.icon-with-text ion-icon {
+    font-size: 24px;
+}
+
+.check-icon {
+    display: none;
+    color: green;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.check-icon2 {
+    display: none;
+    color: green;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+/* Estilo para mensagens de status */
+.message.status {
+    background-color: #DCDCDC;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* Estilo para mensagens públicas */
+.message.message {
+    background-color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    word-wrap: break-word;
+}
+
+/* Estilo para mensagens privadas */
+.message.private_message {
+    background-color: #FFDEDE;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    word-wrap: break-word;
+}
+
+/* Estilo para a hora */
+.message .time {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Estilo do nome do usuário */
+.message .from {
+    font-weight: bold;
+}
+
+/* Estilo do texto da mensagem */
+.message .text {
+    word-wrap: break-word;
+    color: #333;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Bate-Papo UOL</title>
+</head>
+<body>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <div class="conteúdo">
+        <div class="topo">
+            <img src="img/Uol.png" alt="Logo">
+            <ion-icon name="people" onclick="abrirModal()"></ion-icon>
+        </div>
+        <div class="mensagem">
+            <div class="message status">
+                <span class="time">09:21:45</span>
+                <span class="from">João</span>
+                <span class="text">entra na sala...</span>
+            </div>
+    
+            <!-- Mensagem pública de "João para Todos" -->
+            <div class="message message">
+                <span class="time">09:22:28</span>
+                <span class="from">João</span>
+                <span class="to">para Todos</span>
+                <span class="text">Bom dia</span>
+            </div>
+    
+            <!-- Mensagem privada de "Maria para João" -->
+            <div class="message message">
+                <span class="time">09:22:38</span>
+                <span class="from">Maria</span>
+                <span class="text">para</span>
+                <span class="from">João</span>
+                <span class="text">Oi João :)</span>
+            </div>
+    
+            <!-- Mensagem reservada de "João para Maria" -->
+            <div class="message private_message">
+                <span class="time">09:22:48</span>
+                <span class="from">João</span>
+                <span class="to">reservadamente para Maria</span>
+                <span class="text">Oi gatinha, quer tc?</span>
+            </div>
+    
+            <!-- Mensagem de "Maria sai da sala" -->
+            <div class="message status">
+                <span class="time">09:22:58</span>
+                <span class="from">Maria</span>
+                <span class="text">sai da sala...</span>
+            </div>
+                <!-- Novas" -->
+        </div>
+        </div>
+        <div class="footer">
+            <input type="text" id="msg" placeholder="Escreva aqui..." required />
+            <ion-icon name="paper-plane-outline" onclick="enviarMensagem()"></ion-icon>
+        </div>
+        <h1 class="publico">Enviando para Todos (público)</h1>
+    </div>
+    <div class="overlay" id="modal" style="display: none;">
+        <div class="modal">
+            <h2 class="texto">Escolha um contato para enviar mensagem:</h2>
+            <div class="icon-with-text" onclick="selecionarContato(this)">
+                <ion-icon name="people"></ion-icon>
+                <span>Todos</span>
+                <span class="check-icon">✓</span> 
+            </div>
+            <!-- Adicione mais contatos aqui, como Eduardo e Luzia -->
+            <h2 class="texto">Escolha a visibilidade:</h2>
+            <div class="icon-with-text" onclick="selecionarVisibilidade(this)">
+                <ion-icon name="lock-open"></ion-icon>
+                <span>Público</span>
+                <span class="check-icon2">✓</span> 
+            </div>
+            <div class="icon-with-text" onclick="selecionarVisibilidade(this)">
+                <ion-icon name="lock-closed"></ion-icon>
+                <span>Reservadamente</span>
+                <span class="check-icon2">✓</span> 
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

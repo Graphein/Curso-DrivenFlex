@@ -17,7 +17,7 @@ function entrarNaSala(nome) {
             console.log("Usuário entrou na sala com sucesso.");
             // Atualiza a lista de participantes online
             document.querySelector('#participantesOnline').innerHTML += `
-                <div>${nome} (Você)</div>
+                <div>${nome} </div>
             `;
             // Chama a função para buscar os participantes
             buscarParticipantes();

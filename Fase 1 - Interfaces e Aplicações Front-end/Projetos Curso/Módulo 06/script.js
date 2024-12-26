@@ -253,6 +253,28 @@ function selecionarContato(element) {
 
     // Define o destinatário da mensagem (nome do participante ou "Todos")
     const recipient = element.querySelector("span").textContent.trim();  // Captura o nome do participante
+    
+    // Atualiza a informação do destinatário na UI
+    const destinatarioTexto = document.getElementById('destinatario-texto');
+    const publicoElemento = document.querySelector('.publico');  // A tag <h1> onde está a informação do destinatário
+
+    if (destinatarioTexto && publicoElemento) {
+        if (recipient === 'Todos') {
+            // Se for "Todos", mantém como público
+            destinatarioTexto.textContent = 'Todos (público)';
+            publicoElemento.classList.remove('reservado');
+            publicoElemento.classList.add('publico');
+            destinatarioTexto.textContent = 'Todos (público)';
+        } else {
+            // Se for um participante específico, torna como reservado
+            destinatarioTexto.textContent = `${recipient} (reservadamente)`;
+            publicoElemento.classList.remove('publico');
+            publicoElemento.classList.add('reservado');
+        }
+    } else {
+        console.error("Elemento destinatario-texto ou publico não encontrado!");
+    }
+
     console.log("Destinatário selecionado:", recipient);  // Aqui você pode fazer a lógica necessária com o destinatário
 }
 

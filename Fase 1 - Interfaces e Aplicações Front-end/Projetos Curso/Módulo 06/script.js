@@ -15,6 +15,12 @@ function entrarNaSala(nome) {
     .then((response) => {
         if (response.ok) {
             console.log("Usuário entrou na sala com sucesso.");
+            // Atualiza a lista de participantes online
+            document.querySelector('#participantesOnline').innerHTML += `
+                <div>${nome} (Você)</div>
+            `;
+            // Chama a função para buscar os participantes
+            buscarParticipantes();
         } else {
             alert("Este nome já está em uso. Por favor, escolha outro.");
             userName = ""; // Reseta o nome para solicitar novamente
@@ -62,6 +68,42 @@ function manterConexaoAtiva() {
 // Manter a conexão ativa a cada 5 segundos
 setInterval(manterConexaoAtiva, 5000);
 
+// Função para buscar os participantes
+function buscarParticipantes() {
+    const url = `https://mock-api.driven.com.br/api/v6/uol/participants/${uuidFixo}`;
+    
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const listaParticipantes = document.getElementById('participantesOnline');
+            listaParticipantes.innerHTML = ''; // Limpa a lista antes de adicionar novamente
+
+            // Adiciona o nome do usuário atual (Você)
+            listaParticipantes.innerHTML += `
+                <div>
+                    <ion-icon name="person-circle"></ion-icon> ${userName}
+                    <span class="check-icon" style="display: none;">✓</span> 
+                </div>
+            `;
+
+            // Adiciona os outros participantes com ícones
+            data.forEach(participante => {
+                if (participante.name !== userName) {  // Evita adicionar o nome do próprio usuário
+                    listaParticipantes.innerHTML += `
+                        <div onclick="selecionarContato(this)">
+                            <ion-icon name="person-circle"></ion-icon> ${participante.name}
+                            <span class="check-icon" style="display: none;">✓</span>
+                        </div>
+                    `;
+                }
+            });
+        })
+        .catch(error => console.error("Erro ao buscar participantes:", error));
+}
+
+// Atualiza a lista de participantes a cada 3 segundos
+setInterval(buscarParticipantes, 3000);
+
 // Função para buscar as mensagens
 function buscarMensagens() {
     const url = `https://mock-api.driven.com.br/api/v6/uol/messages/${uuidFixo}`;
@@ -88,7 +130,7 @@ function renderizarMensagens(mensagens) {
         
         if (mensagem.type === 'status') {
             novaMensagem.classList.add('message', 'status'); // Classe de status
-            novaMensagem.innerHTML = `
+            novaMensagem.innerHTML = ` 
                 <span class="time">${mensagem.time}</span>
                 <span class="from">${mensagem.from}</span>
                 <span class="text">${mensagem.text}</span>
@@ -177,6 +219,7 @@ function enviarMensagem() {
     // Limpa o campo de entrada após o envio
     input.value = '';
 }
+
 // Função para abrir o modal de seleção
 function abrirModal() {
     const modal = document.getElementById("modal");
@@ -196,44 +239,25 @@ document.getElementById("modal").addEventListener("click", function (event) {
     }
 });
 
-// Função para exibir e esconder o modal de forma que a conexão não seja perdida
-document.addEventListener('DOMContentLoaded', () => {
-    // Esta parte garante que o chat e a conexão do servidor não sejam interrompidos
-    // mesmo com a abertura e fechamento do modal
-    const modal = document.getElementById('modal');
-
-    // Função para abrir o modal
-    const abrirBtn = document.getElementById('abrirModalBtn');
-    if (abrirBtn) {
-        abrirBtn.addEventListener('click', () => {
-            abrirModal();
-        });
-    }
-
-    // Função para fechar o modal
-    const fecharBtn = document.getElementById('fecharModalBtn');
-    if (fecharBtn) {
-        fecharBtn.addEventListener('click', () => {
-            fecharModal();
-        });
-    }
-
-    // Event listener para fechar o modal quando clicar fora dele
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            fecharModal();
-        }
-    });
-});
-// Função que esconde ou exibe o ícone de check dependendo da seleção
+// Função para exibir e esconder o ícone de check dependendo da seleção
 function selecionarContato(element) {
+    // Esconde todos os ícones de seleção
     const checkIcons = document.querySelectorAll('.check-icon');
-    checkIcons.forEach(icon => icon.style.display = 'none'); // Esconde todos os ícones de seleção
+    checkIcons.forEach(icon => icon.style.display = 'none');
 
+    // Exibe o ícone de check no item clicado
     const checkIcon = element.querySelector('.check-icon');
-    checkIcon.style.display = 'inline'; // Exibe o ícone de seleção do item clicado
-    recipient = element.querySelector("span").textContent; // Define o destinatário da mensagem
+    if (checkIcon) {
+        checkIcon.style.display = 'inline';  // Exibe o ícone de seleção do item clicado
+    }
+
+    // Define o destinatário da mensagem (nome do participante ou "Todos")
+    const recipient = element.querySelector("span").textContent.trim();  // Captura o nome do participante
+    console.log("Destinatário selecionado:", recipient);  // Aqui você pode fazer a lógica necessária com o destinatário
 }
+
+// Atualiza a lista de participantes no início
+buscarParticipantes();
 
 // Função para selecionar a visibilidade
 function selecionarVisibilidade(element) {

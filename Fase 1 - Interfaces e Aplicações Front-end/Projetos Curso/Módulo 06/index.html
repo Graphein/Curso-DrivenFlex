@@ -27,22 +27,30 @@
     <div class="overlay" id="modal" style="display: none;">
         <div class="modal">
             <h2 class="texto">Escolha um contato para enviar mensagem:</h2>
-            <div class="icon-with-text" onclick="selecionarContato(this)">
-                <ion-icon name="people"></ion-icon>
-                <span>Todos</span>
-                <span class="check-icon">✓</span> 
+            <div class="icon-with-text">
+                <div class="Todos" onclick="selecionarContato(this)">
+                    <ion-icon name="people"></ion-icon>
+                    <span>Todos</span>
+                    <span class="check-icon" style="display:none;">✓</span>
+                </div> 
+                <div class="Online" id="participantesOnline">
+                    <!-- Lista de participantes será injetada aqui -->
+                </div>
             </div>
-            <!-- Adicione mais contatos aqui, como Eduardo e Luzia -->
             <h2 class="texto">Escolha a visibilidade:</h2>
             <div class="icon-with-text" onclick="selecionarVisibilidade(this)">
-                <ion-icon name="lock-open"></ion-icon>
-                <span>Público</span>
-                <span class="check-icon2">✓</span> 
+                <div class="visibilidade">
+                    <ion-icon name="lock-open"></ion-icon>
+                    <span>Público</span>
+                    <span class="check-icon2">✓</span> 
+                </div>
             </div>
             <div class="icon-with-text" onclick="selecionarVisibilidade(this)">
-                <ion-icon name="lock-closed"></ion-icon>
-                <span>Reservadamente</span>
-                <span class="check-icon2">✓</span> 
+                <div class="visibilidade">
+                    <ion-icon name="lock-closed"></ion-icon>
+                    <span>Reservadamente</span>
+                    <span class="check-icon2">✓</span> 
+                </div>
             </div>
         </div>
     </div>

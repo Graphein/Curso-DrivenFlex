@@ -23,7 +23,6 @@
     width: 75px;
     height: 53px;
 }
-
 .topo > ion-icon {
     margin-top: 5px;
     height: 53px;
@@ -115,10 +114,18 @@
 
 .icon-with-text {
     display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 5px 0;
+    flex-direction: column;
     cursor: pointer;
+}
+.Todos div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.visibilidade div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .icon-with-text ion-icon {
@@ -138,6 +145,22 @@
     margin-left: 10px;
     font-size: 20px;
 }
+#participantesOnline {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+#participantesOnline div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#participantesOnline ion-icon {
+    margin-right: 10px;
+}
+
 
 /* Estilo para mensagens de status */
 .message.status {

@@ -68,7 +68,55 @@ function manterConexaoAtiva() {
 // Manter a conexão ativa a cada 5 segundos
 setInterval(manterConexaoAtiva, 5000);
 
-// Função para buscar os participantes
+let recipientSelecionado = "Todos"; // Variável global para armazenar o destinatário selecionado
+
+// Função para selecionar a visibilidade
+function selecionarVisibilidade(element) {
+    const checkIcons = document.querySelectorAll('.check-icon2');
+    checkIcons.forEach(icon => icon.style.display = 'none'); // Esconde os ícones de seleção
+
+    const checkIcon = element.querySelector('.check-icon2');
+    checkIcon.style.display = 'inline'; // Exibe o ícone de seleção
+
+    visibility = element.querySelector("span").textContent === "Público" ? "public" : "private"; // Define a visibilidade
+    atualizarDestinatarioTexto(); // Atualiza a exibição do destinatário e visibilidade
+}
+
+// Função para selecionar o contato
+function selecionarContato(element) {
+    // Esconde todos os ícones de seleção
+    const checkIcons = document.querySelectorAll('.check-icon');
+    checkIcons.forEach(icon => icon.style.display = 'none');
+
+    // Exibe o ícone de check no item clicado
+    const checkIcon = element.querySelector('.check-icon');
+    if (checkIcon) {
+        checkIcon.style.display = 'inline';  // Exibe o ícone de seleção do item clicado
+    }
+
+    // Define o destinatário da mensagem (nome do participante ou "Todos")
+    const recipient = element.querySelector("span").textContent.trim();  // Captura o nome do participante
+
+    // Atualiza o destinatário selecionado
+    recipientSelecionado = recipient;
+
+    // Atualiza a informação do destinatário na UI
+    atualizarDestinatarioTexto(); // Atualiza a exibição do destinatário e visibilidade
+}
+
+// Função para atualizar a exibição do destinatário e visibilidade
+function atualizarDestinatarioTexto() {
+    const destinatarioTexto = document.getElementById('destinatario-texto');
+
+    if (recipientSelecionado === 'Todos') {
+        destinatarioTexto.textContent = `(${visibility === 'public' ? 'Público' : 'Reservadamente'})`;
+    } else 
+    {
+        destinatarioTexto.textContent = `${recipientSelecionado} (${visibility === 'public' ? 'Público' : 'Reservadamente'})`;
+    }
+}
+
+// Função para atualizar a lista de participantes
 function buscarParticipantes() {
     const url = `https://mock-api.driven.com.br/api/v6/uol/participants/${uuidFixo}`;
     
@@ -78,11 +126,12 @@ function buscarParticipantes() {
             const listaParticipantes = document.getElementById('participantesOnline');
             listaParticipantes.innerHTML = ''; // Limpa a lista antes de adicionar novamente
 
-            // Adiciona o nome do usuário atual (Você)
+            // Adiciona a opção "Todos"
             listaParticipantes.innerHTML += `
-                <div>
-                    <ion-icon name="person-circle"></ion-icon> ${userName}
-                    <span class="check-icon" style="display: none;">✓</span> 
+                <div onclick="selecionarContato(this)">
+                    <ion-icon name="people"></ion-icon>
+                    <span>Todos</span>
+                    <span class="check-icon" style="display:${recipientSelecionado === 'Todos' ? 'inline' : 'none'};">✓</span>
                 </div>
             `;
 
@@ -91,8 +140,9 @@ function buscarParticipantes() {
                 if (participante.name !== userName) {  // Evita adicionar o nome do próprio usuário
                     listaParticipantes.innerHTML += `
                         <div onclick="selecionarContato(this)">
-                            <ion-icon name="person-circle"></ion-icon> ${participante.name}
-                            <span class="check-icon" style="display: none;">✓</span>
+                            <ion-icon name="person-circle"></ion-icon>
+                            <span>${participante.name}</span>
+                            <span class="check-icon" style="display:${recipientSelecionado === participante.name ? 'inline' : 'none'};">✓</span>
                         </div>
                     `;
                 }
@@ -101,7 +151,10 @@ function buscarParticipantes() {
         .catch(error => console.error("Erro ao buscar participantes:", error));
 }
 
-// Atualiza a lista de participantes a cada 3 segundos
+// Chama a função de buscar participantes no início
+buscarParticipantes();
+
+// Atualiza a lista de participantes no início e a cada 3 segundos
 setInterval(buscarParticipantes, 3000);
 
 // Função para buscar as mensagens
@@ -136,7 +189,7 @@ function renderizarMensagens(mensagens) {
                 <span class="text">${mensagem.text}</span>
             `;
         } else if (mensagem.type === 'message') {
-            novaMensagem.classList.add('message', 'user'); // Classe de mensagem de chat
+            novaMensagem.classList.add('message', 'publica'); // Classe de mensagem de chat
             novaMensagem.innerHTML = `
                 <span class="time">${mensagem.time}</span>
                 <span class="from">${mensagem.from}</span>
@@ -173,13 +226,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Função para enviar a mensagem
 let visibility = "public";  // Variável para armazenar a visibilidade da mensagem
+let enviandoMensagem = false;  // Variável de controle para o envio
 
 function enviarMensagem() {
+    if (enviandoMensagem) return;  // Se já estiver enviando, não faz nada
+
+    enviandoMensagem = true;  // Marca que a mensagem está sendo enviada
+
     const input = document.getElementById('msg');
     const mensagem = input.value.trim(); // Captura e remove espaços extras
 
     if (mensagem === '') {
         alert('Por favor, escreva uma mensagem!');
+        enviandoMensagem = false;  // Libera o envio para a próxima tentativa
         return;
     }
 
@@ -212,6 +271,9 @@ function enviarMensagem() {
     })
     .catch(error => {
         console.error("Erro ao enviar mensagem:", error);
+    })
+    .finally(() => {
+        enviandoMensagem = false;  // Libera a variável de controle, permitindo o envio de novas mensagens
     });
 
     // Adiciona a mensagem na interface do usuário com um pequeno atraso
@@ -222,7 +284,7 @@ function enviarMensagem() {
         // Se for mensagem privada, aplica o fundo vermelho
         if (visibility === "private") {
             novaMensagem.classList.add('message', 'private'); // Classe para mensagem privada
-            novaMensagem.innerHTML = `
+            novaMensagem.innerHTML = ` 
                 <span class="time">${time}</span>
                 <span class="from">${userName}</span>
                 <span class="to">para ${destinatarioTexto.replace(' (reservadamente)', '')}:</span>
@@ -244,10 +306,14 @@ function enviarMensagem() {
     // Limpa o campo de entrada após o envio
     input.value = '';
 }
+
 // Função para abrir o modal de seleção
 function abrirModal() {
     const modal = document.getElementById("modal");
     modal.style.display = "flex"; // Mostra o modal
+
+    // Atualiza a lista de participantes imediatamente ao abrir o modal
+    buscarParticipantes();
 }
 
 // Função para fechar o modal
@@ -263,55 +329,3 @@ document.getElementById("modal").addEventListener("click", function (event) {
     }
 });
 
-// Função para exibir e esconder o ícone de check dependendo da seleção
-function selecionarContato(element) {
-    // Esconde todos os ícones de seleção
-    const checkIcons = document.querySelectorAll('.check-icon');
-    checkIcons.forEach(icon => icon.style.display = 'none');
-
-    // Exibe o ícone de check no item clicado
-    const checkIcon = element.querySelector('.check-icon');
-    if (checkIcon) {
-        checkIcon.style.display = 'inline';  // Exibe o ícone de seleção do item clicado
-    }
-
-    // Define o destinatário da mensagem (nome do participante ou "Todos")
-    const recipient = element.querySelector("span").textContent.trim();  // Captura o nome do participante
-    
-    // Atualiza a informação do destinatário na UI
-    const destinatarioTexto = document.getElementById('destinatario-texto');
-    const publicoElemento = document.querySelector('.publico');  // A tag <h1> onde está a informação do destinatário
-
-    if (destinatarioTexto && publicoElemento) {
-        if (recipient === 'Todos') {
-            // Se for "Todos", mantém como público
-            destinatarioTexto.textContent = 'Todos (público)';
-            publicoElemento.classList.remove('reservado');
-            publicoElemento.classList.add('publico');
-            destinatarioTexto.textContent = 'Todos (público)';
-        } else {
-            // Se for um participante específico, torna como reservado
-            destinatarioTexto.textContent = `${recipient} (reservadamente)`;
-            publicoElemento.classList.remove('publico');
-            publicoElemento.classList.add('reservado');
-        }
-    } else {
-        console.error("Elemento destinatario-texto ou publico não encontrado!");
-    }
-
-    console.log("Destinatário selecionado:", recipient);  // Aqui você pode fazer a lógica necessária com o destinatário
-}
-
-// Atualiza a lista de participantes no início
-buscarParticipantes();
-
-// Função para selecionar a visibilidade
-function selecionarVisibilidade(element) {
-    const checkIcons = document.querySelectorAll('.check-icon2');
-    checkIcons.forEach(icon => icon.style.display = 'none'); // Esconde os ícones de seleção
-
-    const checkIcon = element.querySelector('.check-icon2');
-    checkIcon.style.display = 'inline'; // Exibe o ícone de seleção
-
-    visibility = element.querySelector("span").textContent === "Público" ? "public" : "private"; // Define a visibilidade
-}

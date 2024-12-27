@@ -89,9 +89,24 @@
     color: black;
 }
 /* Estilos para mensagens privadas */
+.message.status {
+    background-color: #DCDCDC;
+    padding: 5px;
+    color: black;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+/* Estilo para mensagens públicas */
+.message.publica { 
+    background-color: white;
+    padding: 10px;
+    color: black;
+    margin: 5px 0;
+    border-radius: 5px;
+}
 .message.private {
-    background-color: #f44336; /* Vermelho */
-    color: white; /* Texto branco */
+    background-color: #FFDEDE; /* Vermelho */
+    color: rgb(7, 7, 7); /* Texto branco */
     border-radius: 5px;
     padding: 10px;
     margin: 5px 0;
@@ -99,7 +114,7 @@
 
 /* Ajuste de estilo para a caixa de mensagem, garantindo que o texto esteja visível */
 .message.private .text {
-    color: white; /* Cor do texto na mensagem privada */
+    color: black; /* Cor do texto na mensagem privada */
 }
 .overlay {
     position: absolute;
@@ -178,33 +193,6 @@
     margin-right: 10px;
 }
 
-
-/* Estilo para mensagens de status */
-.message.status {
-    background-color: #DCDCDC;
-    padding: 5px;
-    margin: 5px 0;
-    border-radius: 5px;
-}
-
-/* Estilo para mensagens públicas */
-.message.message {
-    background-color: white;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-    word-wrap: break-word;
-}
-
-/* Estilo para mensagens privadas */
-.message.private_message {
-    background-color: #FFDEDE;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-    word-wrap: break-word;
-}
-
 /* Estilo para a hora */
 .message .time {
     font-weight: bold;
@@ -218,9 +206,9 @@
 
 /* Estilo do texto da mensagem */
 .message .text {
-    word-wrap: break-word;
-    color: #333;
+    color: black;
 }
+
 
 @media ( max-width: 320px)
 {

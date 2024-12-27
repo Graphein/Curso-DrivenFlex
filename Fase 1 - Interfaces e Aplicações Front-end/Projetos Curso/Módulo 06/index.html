@@ -8,51 +8,64 @@
     <title>Bate-Papo UOL</title>
 </head>
 <body>
+    <!-- Carregando os ícones da biblioteca Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
     <div class="conteúdo">
         <div class="topo">
-            <img src="img/Uol.png" alt="Logo">
-            <ion-icon name="people" onclick="abrirModal()"></ion-icon>
+            <img src="img/Uol.png" alt="Logo" class="logo">
+            <ion-icon name="people" onclick="abrirModal()"></ion-icon> <!-- Ícone para abrir modal -->
         </div>
+
         <div class="mensagem">
-            <!-- Novas" -->
+            <!-- Mensagens enviadas serão injetadas aqui -->
         </div>
+
         <div class="footer">
-                <input type="text" id="msg" placeholder="Escreva aqui..." required />
-                <ion-icon name="paper-plane-outline" onclick="enviarMensagem()"></ion-icon>
+            <!-- Campo de envio de mensagem -->
+            <input type="text" id="msg" placeholder="Escreva aqui..." required />
+            <ion-icon name="paper-plane-outline" onclick="enviarMensagem()"></ion-icon> <!-- Ícone de enviar -->
         </div>
+
+        <!-- Exibe quem está recebendo a mensagem -->
         <h1 class="publico">Enviando para <span id="destinatario-texto">Todos (público)</span></h1>
     </div>
+
+    <!-- Modal para seleção de destinatário e visibilidade -->
     <div class="overlay" id="modal" style="display: none;">
         <div class="modal">
             <h2 class="texto">Escolha um contato para enviar mensagem:</h2>
             <div class="icon-with-text">
-                <div class="Todos" onclick="selecionarContato(this)">
-                    <ion-icon name="people"></ion-icon>
-                    <span>Todos</span>
-                    <span class="check-icon" style="display:none;">✓</span>
-                </div> 
+                <!-- Lista de participantes online -->
                 <div class="Online" id="participantesOnline">
-                    <!-- Lista de participantes será injetada aqui -->
+                    <!-- Exemplo de como os participantes serão injetados dinamicamente -->
+                    <div onclick="selecionarContato(this)">
+                        <ion-icon name="person-circle"></ion-icon>
+                        <span>Nome do Participante</span>
+                        <span class="check-icon" style="display:none;">✓</span>
+                    </div>
                 </div>
             </div>
+
+            <!-- Escolha de visibilidade -->
             <h2 class="texto">Escolha a visibilidade:</h2>
             <div class="icon-with-text" onclick="selecionarVisibilidade(this)">
                 <div class="visibilidade">
                     <ion-icon name="lock-open"></ion-icon>
                     <span>Público</span>
-                    <span class="check-icon2">✓</span> 
+                    <span class="check-icon2" style="display: inline;">✓</span> 
                 </div>
             </div>
+            
+            <!-- Visibilidade privada -->
             <div class="icon-with-text" onclick="selecionarVisibilidade(this)">
                 <div class="visibilidade">
                     <ion-icon name="lock-closed"></ion-icon>
                     <span>Reservadamente</span>
-                    <span class="check-icon2">✓</span> 
+                    <span class="check-icon2" style="display: none;">✓</span> 
                 </div>
             </div>
-        </div>
     </div>
     <script src="script.js"></script>
 </body>

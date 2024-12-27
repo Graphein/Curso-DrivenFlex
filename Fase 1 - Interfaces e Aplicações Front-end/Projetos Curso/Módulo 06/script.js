@@ -143,8 +143,17 @@ function renderizarMensagens(mensagens) {
                 ${mensagem.to ? `<span class="to">para ${mensagem.to}:</span>` : ''}
                 <span class="text">${mensagem.text}</span>
             `;
+        } else if (mensagem.type === 'private_message') {
+            // Se for mensagem privada, aplica a classe para exibir fundo vermelho
+            novaMensagem.classList.add('message', 'private');
+            novaMensagem.innerHTML = `
+                <span class="time">${mensagem.time}</span>
+                <span class="from">${mensagem.from}</span>
+                <span class="to">para ${mensagem.to}:</span>
+                <span class="text">${mensagem.text}</span>
+            `;
         }
-        
+
         containerMensagens.appendChild(novaMensagem);
     });
 
@@ -155,6 +164,7 @@ function renderizarMensagens(mensagens) {
     }
 }
 
+
 // Atualiza as mensagens a cada 3 segundos
 document.addEventListener('DOMContentLoaded', () => {
     buscarMensagens(); // Carrega as mensagens inicialmente
@@ -162,6 +172,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Função para enviar a mensagem
+let visibility = "public";  // Variável para armazenar a visibilidade da mensagem
+
 function enviarMensagem() {
     const input = document.getElementById('msg');
     const mensagem = input.value.trim(); // Captura e remove espaços extras
@@ -172,13 +184,14 @@ function enviarMensagem() {
     }
 
     const time = new Date().toLocaleTimeString(); // Obtém a hora atual
+    const destinatarioTexto = document.getElementById('destinatario-texto').textContent;
 
     // Envia a mensagem para o servidor
     const mensagemData = {
         from: userName,
-        to: 'Todos',
+        to: destinatarioTexto === 'Todos (público)' ? 'Todos' : destinatarioTexto.replace(' (reservadamente)', ''),
         text: mensagem,
-        type: 'message', // Tipo 'message' para mensagens de chat
+        type: visibility === "private" ? "private_message" : "message",  // Tipo de mensagem
     };
 
     const url = `https://mock-api.driven.com.br/api/v6/uol/messages/${uuidFixo}`;
@@ -201,16 +214,28 @@ function enviarMensagem() {
         console.error("Erro ao enviar mensagem:", error);
     });
 
-    // Adiciona um atraso de 2 segundos antes de mostrar a mensagem na tela
+    // Adiciona a mensagem na interface do usuário com um pequeno atraso
     setTimeout(() => {
         const containerMensagens = document.querySelector('.mensagem');
         const novaMensagem = document.createElement('div');
-        novaMensagem.classList.add('message', 'user'); // Classe de usuário
-        novaMensagem.innerHTML = `
-            <span class="time">${time}</span>
-            <span class="from">${userName}</span>
-            <span class="text">${mensagem}</span>
-        `;
+
+        // Se for mensagem privada, aplica o fundo vermelho
+        if (visibility === "private") {
+            novaMensagem.classList.add('message', 'private'); // Classe para mensagem privada
+            novaMensagem.innerHTML = `
+                <span class="time">${time}</span>
+                <span class="from">${userName}</span>
+                <span class="to">para ${destinatarioTexto.replace(' (reservadamente)', '')}:</span>
+                <span class="text">${mensagem}</span>
+            `;
+        } else {
+            novaMensagem.classList.add('message', 'user'); // Classe para mensagem pública
+            novaMensagem.innerHTML = `
+                <span class="time">${time}</span>
+                <span class="from">${userName}</span>
+                <span class="text">${mensagem}</span>
+            `;
+        }
 
         containerMensagens.appendChild(novaMensagem);
         containerMensagens.scrollTop = containerMensagens.scrollHeight; // Rola para o final
@@ -219,7 +244,6 @@ function enviarMensagem() {
     // Limpa o campo de entrada após o envio
     input.value = '';
 }
-
 // Função para abrir o modal de seleção
 function abrirModal() {
     const modal = document.getElementById("modal");

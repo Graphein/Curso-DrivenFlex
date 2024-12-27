@@ -88,6 +88,19 @@
     margin-left: 25px;
     color: black;
 }
+/* Estilos para mensagens privadas */
+.message.private {
+    background-color: #f44336; /* Vermelho */
+    color: white; /* Texto branco */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+/* Ajuste de estilo para a caixa de mensagem, garantindo que o texto esteja visível */
+.message.private .text {
+    color: white; /* Cor do texto na mensagem privada */
+}
 .overlay {
     position: absolute;
     top: 0;

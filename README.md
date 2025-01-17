@@ -43,3 +43,11 @@ Módulo 04 - Adicionando interatividade com JavaScript
 Módulo 05 - Aprofundando em manipulação de DOM 
 
   - Desafio Final Projeto Parrot Card Game ✔️
+
+Tornando seu site dinâmico com APIs e AJAX
+
+ - Desafio Final Projeto Bate-Papo UOL ✔️
+
+Manipulando arrays e Higher-Order Functions
+
+ - Desafio Final Teste de Algoritmos e/ou Estruturas de Dados ✔️

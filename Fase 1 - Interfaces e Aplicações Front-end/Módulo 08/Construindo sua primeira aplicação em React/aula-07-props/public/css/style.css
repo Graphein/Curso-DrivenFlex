@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #161616;
+  margin: 0;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  height: 60px;
+  border-bottom: 1px solid #222;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar .container {
+  width: 100%;
+  max-width: 1000px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+}
+
+.botao {
+  background-color: #222;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.posts {
+  min-height: calc(100vh - 120px);
+}
+
+.post {
+  margin: 20px auto;
+  max-width: 480px;
+  width: 100%;
+  border: 1px solid #222;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.titulo {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.post img {
+  width: 100%;
+}
+
+.rodape {
+  height: 60px;
+  border-top: 1px solid #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #444;
+  font-size: 11px;
+}

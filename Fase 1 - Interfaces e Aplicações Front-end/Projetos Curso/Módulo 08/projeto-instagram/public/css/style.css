@@ -96,6 +96,7 @@ body {
   padding: 0 18px;
   overflow: hidden;
   position: relative;
+  
 }
 
 .story {
@@ -304,4 +305,6 @@ ion-icon {
   padding-top: 5px;
   color: black;
 }
-
+.espaco {
+  margin: 0 2px; /* Ajuste o valor para mais ou menos espaço */
+}

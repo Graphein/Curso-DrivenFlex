@@ -8,11 +8,14 @@ const suggestionsData = [
 
 export default function Suggestions() {
   return (
-    <div className="suggestions">
-      <h3>Sugestões para você</h3>
-      {suggestionsData.map((suggestion, index) => (
-        <Suggestion key={index} {...suggestion} />
-      ))}
+    <div className="sugestoes">
+      <div className="titulo">
+        Sugestões para você
+        <div>Ver tudo</div>
+        {suggestionsData.map((suggestion, index) => (
+          <Suggestion key={index} {...suggestion} />
+        ))}
+      </div>
     </div>
-  );
+    );
 }

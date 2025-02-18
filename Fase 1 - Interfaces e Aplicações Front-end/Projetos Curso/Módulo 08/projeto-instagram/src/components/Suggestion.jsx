@@ -1,14 +1,14 @@
 export default function Suggestion({ user, reason }) {
     return (
-      <div className="suggestion">
-        <div className="info">
+      <div className="sugestao">
+        <div className="usuario">
           <img src={`assets/img/${user}.svg`} alt={user} />
-          <div>
-            <strong>{user}</strong>
-            <p>{reason}</p>
+          <div className="texto">
+            <div className="nome">{user}</div>
+            <div className="razao">{reason}</div>
           </div>
         </div>
-        <button>Seguir</button>
+        <div className="seguir">Seguir</div>
       </div>
     );
 }

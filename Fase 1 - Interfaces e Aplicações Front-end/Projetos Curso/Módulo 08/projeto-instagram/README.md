@@ -1,1 +1,2 @@
-![localhost_3000_](https://github.com/user-attachments/assets/c1e14b83-4f9d-4408-976e-2646e32e88f1)
+![Home](image.png)
+![Detalhes](image-1.png)

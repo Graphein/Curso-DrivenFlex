@@ -45,13 +45,3 @@ Zap Recall é um aplicativo de flashcards interativos desenvolvido com React, fo
 🖼️ Imagem do Projeto
 
 
-![image](https://github.com/user-attachments/assets/9bec9b00-96cc-430b-bf9d-6099da4ed59e)
-
-![image](https://github.com/user-attachments/assets/8c9b53d0-034e-43a3-8875-b13cfaefadf2)
-
-![image](https://github.com/user-attachments/assets/46d56cee-cac0-48d6-9050-b5e62e5d4336)
-
-![image](https://github.com/user-attachments/assets/1e9a116a-2796-43dd-afbc-0a307c2fb1b1)
-
-![image](https://github.com/user-attachments/assets/3a64db5e-5dff-4aac-b3b7-ffcb5825c7a4)
-

@@ -1,45 +1,55 @@
-Zap Recall
+📚 Zap Recall
 
-Descrição
+📖 Descrição
 
-Este é um projeto de flashcards interativos desenvolvido com React, sem o uso de Context ou Router. Toda a manipulação de informações é feita via estados, e a estilização é implementada obrigatoriamente com styled-components.
+Zap Recall é um aplicativo de flashcards interativos desenvolvido com React, focado no aprendizado dinâmico. Neste projeto, você pode testar seus conhecimentos utilizando um deck de perguntas e respostas, acompanhando seu progresso em tempo real.
 
-Tecnologias Utilizadas
+🚀 Tecnologias Utilizadas
 
-React
+⚛️ React - Para a construção da interface e manipulação de estados.
 
-Styled-components
+🎨 Styled-components - Para estilização modular e dinâmica.
 
-Vite
+⚡ Vite - Para criação e execução eficiente do projeto.
 
-Vercel (para deploy)
+🌍 Vercel - Para deploy rápido e acessível.
 
-Funcionalidades
+✨ Funcionalidades
 
-Uso de um deck de flashcards com perguntas e respostas sobre um tema escolhido pelo usuário.
+📌 Flashcards interativos com perguntas e respostas sobre o tema escolhido pelo usuário.
 
-Interface responsiva baseada no layout do Figma.
+📱 Interface responsiva seguindo o layout do Figma.
 
-Flashcards iniciais virados para baixo e numerados.
+🔄 Virada de flashcards para exibir perguntas e respostas.
 
-Clique para revelar a pergunta e, posteriormente, a resposta.
+✅ Classificação das respostas em "Não lembrei", "Quase não lembrei" e "Zap!".
 
-Três opções de resposta: "Não lembrei", "Quase não lembrei" e "Zap!".
+📊 Contador de progresso exibindo o número de perguntas respondidas.
 
-O status do flashcard é alterado após a resposta, com a cor e o ícone correspondente.
+🎯 Armazenamento via estados (sem uso de Context ou Router).
 
-Contador exibindo o progresso do usuário.
+🏗️ Estrutura do Projeto
 
-Estrutura do Projeto
+📂 Componentização: Cada elemento é separado em componentes React.
 
-Componentização dos elementos da página em arquivos separados.
+🔄 Renderização dinâmica: Flashcards são gerados a partir de um array de objetos usando .map().
 
-Dados dinâmicos (decks, flashcards) representados como arrays de objetos e renderizados com .map().
+🖌️ Estilização com styled-components: Flexibilidade e modularidade no design.
 
-Layout e Responsividade
+🎨 Layout e Responsividade
 
-Seguir as diretrizes do Figma para fontes e espaçamentos.
+📏 Seguir diretrizes do Figma: Cores, espaçamentos e fontes.
 
-O projeto deve se adaptar a diferentes tamanhos de tela sem um tamanho fixo.
+📱 Adaptação para diferentes telas: O site deve funcionar em diversas resoluções.
 
-Como Executar o Projeto
+🖼️ Imagem do Projeto
+
+
+![image](https://github.com/user-attachments/assets/9bec9b00-96cc-430b-bf9d-6099da4ed59e)
+
+![image](https://github.com/user-attachments/assets/8c9b53d0-034e-43a3-8875-b13cfaefadf2)
+
+![image](https://github.com/user-attachments/assets/46d56cee-cac0-48d6-9050-b5e62e5d4336)
+
+![image](https://github.com/user-attachments/assets/1e9a116a-2796-43dd-afbc-0a307c2fb1b1)
+

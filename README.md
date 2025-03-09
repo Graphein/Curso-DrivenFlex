@@ -51,3 +51,13 @@ Módulo 06 - Tornando seu site dinâmico com APIs e AJAX
 Módulo 07 - Manipulando arrays e Higher-Order Functions
 
  - Desafio Final Teste de Algoritmos e/ou Estruturas de Dados ✔️
+
+
+Módulo 08 - Construindo sua primeira aplicação em React
+
+ - Desafio Final Projeto Instagram - React ✔️
+
+ 
+Módulo 09 - Aprofundando em gerenciamento de estado
+
+ - Desafio Final Projeto ZapRecall ✔️

@@ -68,6 +68,6 @@ Módulo 10 - Aprofundando em gerenciamento de estado
  - Desafio Final Projeto CineFlex ✔️
 
   
-Módulo 09 - Aprofundando em gerenciamento de estado
+Módulo 11 - Aprofundando em gerenciamento de estado
 
  - Desafio Final Projeto TrackIt ✔️

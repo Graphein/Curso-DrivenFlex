@@ -61,3 +61,13 @@ Módulo 08 - Construindo sua primeira aplicação em React
 Módulo 09 - Aprofundando em gerenciamento de estado
 
  - Desafio Final Projeto ZapRecall ✔️
+
+  
+Módulo 10 - Aprofundando em gerenciamento de estado
+
+ - Desafio Final Projeto CineFlex ✔️
+
+  
+Módulo 09 - Aprofundando em gerenciamento de estado
+
+ - Desafio Final Projeto TrackIt ✔️

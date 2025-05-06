@@ -2,7 +2,7 @@
 Sistema de compra de ingressos de cinema, desenvolvido em React utilizando Vite e styled-components. Nele, é possível visualizar os filmes em cartaz, selecionar o horário da sessão, escolher os assentos desejados e finalizar a reserva com nome e CPF.
 
 🔗 Acesse o projeto
-👉 cineflex-mocha-chi.vercel.app
+[👉 cineflex-mocha-chi.vercel.app](https://cineflex-mocha-chi.vercel.app/)
 
 ⚙️ Funcionalidades
 Listagem de filmes em cartaz

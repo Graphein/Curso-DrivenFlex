@@ -1,0 +1,18 @@
+{
+  "name": "lista-compras",
+  "version": "1.0.0",
+  "description": "API REST de lista de compras com Node.js e Express",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "http-status": "^1.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

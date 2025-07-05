@@ -1,0 +1,19 @@
+{
+  "name": "ajudem-o-instrutor",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.1"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

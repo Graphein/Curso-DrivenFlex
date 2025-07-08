@@ -60,7 +60,7 @@ Este repositório documenta minha trajetória e os projetos desenvolvidos ao lon
 
 | Módulo | Tema | Projeto | Status |
 |--------|------|---------|--------|
-| Algoritmos (loop, simulação, hash, busca binária etc) | Testes diversos | ✅ e 🔒 |
+| Algoritmos (loop, simulação, hash, busca binária etc) | Testes diversos | 🔒 Bloqueado |
 | TypeScript | Driven Recharge | 🔒 Bloqueado |
 | ORMs e Banco Relacional | DrivenPass | 🔒 Bloqueado |
 | Testes de Integração | MyTickets | 🔒 Bloqueado |

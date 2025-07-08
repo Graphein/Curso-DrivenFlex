@@ -1,99 +1,89 @@
-# 📚 Formação Full Stack - Driven Education
+# 📚 Formação Full Stack - Driven Education (FLEN)
 
-Este repositório documenta minha trajetória e os projetos desenvolvidos ao longo do curso Full Stack da **Driven Education** (FLEN), um programa intensivo focado na formação de desenvolvedores web completos.
-
-## 🚀 Sobre o Curso
-
-O curso é dividido em dois grandes módulos:
-
-- **Front-end**: foco na construção de interfaces responsivas e interativas com HTML, CSS, JavaScript e React.
-- **Back-end**: foco em APIs, banco de dados, lógica de negócio e deploy de aplicações com Node.js, Express, MongoDB e PostgreSQL.
-
-Também são abordados:
-- Git e GitHub (versionamento)
-- Deploy e integração contínua
-- Metodologias ágeis (Scrum)
-- Projetos práticos para construção de portfólio
+Este repositório documenta minha trajetória e os projetos desenvolvidos ao longo do curso Full Stack da **Driven Education**, uma formação intensiva e prática voltada ao desenvolvimento de aplicações web completas — do front ao back-end.
 
 ---
 
-## 🧰 Tech Stack
+## 🧰 Tech Stack em Aprendizado
 
-### Front-end
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-- DOM Manipulation
-- AJAX e consumo de APIs REST
-- React.js
-- JSX
-- React Router
-- Context API
-- Gerenciamento de estado com hooks (useState, useEffect, etc.)
-- Componentização e boas práticas de UI
+### ✅ Já aprendidas:
+- **Front-end**: HTML5, CSS3, JavaScript, DOM, AJAX, React.js, React Router, Context API, Single-Page Applications.
+- **Back-end**: Node.js, Express, MongoDB (Mongoose), PostgreSQL (SQL), Autenticação com JWT, Hash com Bcrypt, Validação com Joi, Arquitetura MVC.
+- **Ferramentas & Práticas**: Git, GitHub, CI/CD, Vercel, Render, Scrum, Kanban.
 
-### Back-end
-- Node.js
-- Express.js
-- MongoDB (com Mongoose)
-- PostgreSQL e SQL
-- Arquitetura MVC
-- Middlewares
-- JWT (JSON Web Token)
-- Bcrypt (hash de senhas)
-- Validação com Joi
-- Testes e organização de rotas
-- Deploy de APIs
-
-### Dev Tools & Metodologias
-- Git e GitHub
-- Controle de versionamento
-- CI/CD (Deploy contínuo)
-- Render, Vercel e outras plataformas de hospedagem
-- Metodologias ágeis (Scrum, Kanban)
-- Kanban com Trello ou similares
+### ⏳ Em andamento / previstos:
+- TypeScript
+- ORMs (Prisma)
+- Testes Unitários e de Integração (Jest, Supertest)
+- Orientação a Objetos
+- Clean Code
+- Algoritmos avançados e análise de complexidade
+- Deploy de aplicações em produção
+- Trabalho em equipe com metodologias ágeis
 
 ---
 
-## 📌 Estrutura do Curso
+## 📌 Estrutura e Progresso no Curso
 
-### 🖥️ 1ª Fase - Desenvolvimento Front-end
+### 🖥️ Fase 1 - Front-end
 
-| Módulo | Conteúdo | Projeto Final |
-|--------|----------|---------------|
-| 01 | HTML e CSS | **Globo.com** ✔️ |
-| 02 | Layouts responsivos | **Instagram (HTML/CSS)** ✔️ |
-| 03 | Lógica de programação | **Teste de Algoritmos** ✔️ |
-| 04 | JavaScript básico | **Driven Eats** ✔️ |
-| 05 | DOM avançado | **Parrot Card Game** ✔️ |
-| 06 | APIs e AJAX | **Bate-Papo UOL** ✔️ |
-| 07 | Arrays e HOFs | **Teste de Algoritmos II** ✔️ |
-| 08 | React básico | **Instagram (React)** ✔️ |
-| 09 | React + Estado | **ZapRecall** ✔️ |
-| 10 | React + Rotas e APIs | **CineFlex** ✔️ |
-| 11 | React + Auth + Context API | **TrackIt** ✔️ |
+| Módulo | Conteúdo | Projeto Final | Aulas | Exercícios | Status |
+|--------|----------|---------------|--------|-------------|--------|
+| 01 | HTML e CSS | Globo.com | 15 | 11 | ✅ |
+| 02 | Layouts Responsivos | Instagram (HTML/CSS) | 14 | 8 | ✅ |
+| 03 | Lógica de Programação | Teste de Algoritmos | 9 | 21 | ✅ |
+| 04 | JavaScript Interativo | Driven Eats | 14 | 8 | ✅ |
+| 05 | Manipulação de DOM | Parrot Card Game | 10 | 6 | ✅ |
+| 06 | APIs e AJAX | Bate-Papo UOL | 9 | 6 | ✅ |
+| 07 | Arrays e HOFs | Teste de Algoritmos | 12 | 32 | ✅ |
+| 08 | React básico | Instagram React | 13 | 10 | ✅ |
+| 09 | Estado no React | ZapRecall | 12 | 8 | ✅ |
+| 10 | SPA e Rotas | CineFlex | 4 | 4 | ✅ |
+| 11 | Estado complexo + Auth | TrackIt | 6 | 2 | ✅ |
 
 ---
 
-### 🛠️ 2ª Fase - Back-end, APIs e Bancos de Dados
+### 🛠️ Fase 2 - Back-end
 
-| Módulo | Conteúdo | Projeto Final |
-|--------|----------|---------------|
-| 01 | Node.js e Express | **Feirinha** ✔️ |
-| 02 | MongoDB | **Tweeteroo** ✔️ |
-| 03 | Arquitetura MVC, autenticação | **MyWallet** ✔️ |
-| 04 | PostgreSQL, SQL | **LinkeDriven** ✔️ |
+| Módulo | Conteúdo | Projeto Final | Aulas | Exercícios | Status |
+|--------|----------|---------------|--------|-------------|--------|
+| 01 | Node.js + Express | Feirinha | 10 | 9 | ✅ |
+| 02 | MongoDB | Tweeteroo | 10 | 8 | ✅ |
+| 03 | Arquitetura Back-end | MyWallet | 9 | 8 | ✅ |
+| 04 | PostgreSQL e SQL | LinkeDriven | 7 | 5 | ⏳ Em andamento |
+| 05 | SQL Avançado | Boardcamp | 6 | 5 | 🔒 Bloqueado |
+| 06 | Modelagem de Dados | BlockDriven | 10 | 6 | 🔒 Bloqueado |
+
+---
+
+### 🧪 Módulos Avançados (Fase 3 e 4)
+
+| Módulo | Tema | Projeto | Status |
+|--------|------|---------|--------|
+| Algoritmos (loop, simulação, hash, busca binária etc) | Testes diversos | ✅ e 🔒 |
+| TypeScript | Driven Recharge | 🔒 Bloqueado |
+| ORMs e Banco Relacional | DrivenPass | 🔒 Bloqueado |
+| Testes de Integração | MyTickets | 🔒 Bloqueado |
+| Testes Unitários | Milhas | 🔒 Bloqueado |
+| Orientação a Objetos | Feirinha OO, Boardcamp OO | 🔒 Bloqueado |
+| Clean Code | Refatoração | 🔒 Bloqueado |
+| Deploy em Produção | Bingo Driven | 🔒 Bloqueado |
+| Metodologias Ágeis | Linkr (projeto em equipe) | 🔒 Bloqueado |
+
+---
+
+## 🧳 Portfólio Pessoal
+
+Durante a formação, desenvolvi diversos projetos práticos com aplicação real de conceitos. Repositórios dos projetos estão disponíveis separadamente no meu perfil do GitHub.
 
 ---
 
 ## 🎓 Sobre a Driven Education
 
-A **Driven** oferece uma formação intensiva, com foco prático, suporte constante e desenvolvimento de projetos reais. O curso é indicado mesmo para quem não tem experiência prévia em programação.
+A **Driven** é uma escola de tecnologia com metodologia prática, imersiva e guiada por profissionais do mercado. O curso full stack é indicado mesmo para quem inicia do zero e deseja ingressar rapidamente no mercado de tecnologia.
 
 ---
 
-## 📁 Portfólio em andamento
+## 📬 Contato
 
-Durante a formação, desenvolvi diversas aplicações que simulam cenários reais de mercado. Veja os repositórios individuais para cada projeto!
-
----
+Fique à vontade para entrar em contato comigo por [LinkedIn](https://www.linkedin.com/in/eduardoleli/) ou através do GitHub para ver mais projetos.

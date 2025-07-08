@@ -1,87 +1,99 @@
-O curso Full Stack da Driven Education (FLEN) é um programa intensivo e completo de desenvolvimento de software, voltado para preparar
-profissionais para o mercado de tecnologia, com foco em programação e construção de aplicações web. O curso é dividido em dois principais módulos:
+# 📚 Formação Full Stack - Driven Education
 
-Desenvolvimento Front-end:
+Este repositório documenta minha trajetória e os projetos desenvolvidos ao longo do curso Full Stack da **Driven Education** (FLEN), um programa intensivo focado na formação de desenvolvedores web completos.
 
-Neste módulo, os alunos aprendem a criar interfaces de usuário (UI) interativas e responsivas. 
-São cobertos conceitos essenciais como HTML, CSS e JavaScript, além de frameworks modernos como React.js. 
-Há um foco em boas práticas de desenvolvimento, como a componentização e a organização do código.
+## 🚀 Sobre o Curso
 
-Desenvolvimento Back-end:
+O curso é dividido em dois grandes módulos:
 
-No segundo módulo, o foco é no desenvolvimento de APIs e no gerenciamento de servidores e bancos de dados. 
-Os alunos aprendem a trabalhar com Node.js, Express, e MongoDB, além de outras ferramentas essenciais 
-para criar a lógica de negócio e o funcionamento por trás das aplicações.
-Além das tecnologias, o curso também inclui:
+- **Front-end**: foco na construção de interfaces responsivas e interativas com HTML, CSS, JavaScript e React.
+- **Back-end**: foco em APIs, banco de dados, lógica de negócio e deploy de aplicações com Node.js, Express, MongoDB e PostgreSQL.
 
-Controle de versionamento com Git e GitHub.
+Também são abordados:
+- Git e GitHub (versionamento)
+- Deploy e integração contínua
+- Metodologias ágeis (Scrum)
+- Projetos práticos para construção de portfólio
 
-Integração e deploy contínuos, possibilitando que os alunos aprendam a colocar suas aplicações no ar, utilizando serviços de hospedagem e cloud.
-Desenvolvimento ágil, onde os alunos trabalham em projetos reais com base em metodologias ágeis, como Scrum.
-Ao final do curso, os alunos terão trabalhado em projetos práticos que demonstram todas as etapas de desenvolvimento de uma aplicação full stack, desde o front-end até o back-end, culminando em um portfólio profissional.
+---
 
-O curso tem uma abordagem prática, com feedback constante e suporte da equipe da Driven, e é destinado a quem deseja entrar rapidamente no mercado de tecnologia, mesmo sem conhecimento prévio em programação.
+## 🧰 Tech Stack
 
-1º Fase - Desenvolvimento Front-end
+### Front-end
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- DOM Manipulation
+- AJAX e consumo de APIs REST
+- React.js
+- JSX
+- React Router
+- Context API
+- Gerenciamento de estado com hooks (useState, useEffect, etc.)
+- Componentização e boas práticas de UI
 
-Módulo 01 - Construindo meu primeiro site com HTML e CSS 
+### Back-end
+- Node.js
+- Express.js
+- MongoDB (com Mongoose)
+- PostgreSQL e SQL
+- Arquitetura MVC
+- Middlewares
+- JWT (JSON Web Token)
+- Bcrypt (hash de senhas)
+- Validação com Joi
+- Testes e organização de rotas
+- Deploy de APIs
 
-  - Desafio Final Projeto Globo.com ✔️
+### Dev Tools & Metodologias
+- Git e GitHub
+- Controle de versionamento
+- CI/CD (Deploy contínuo)
+- Render, Vercel e outras plataformas de hospedagem
+- Metodologias ágeis (Scrum, Kanban)
+- Kanban com Trello ou similares
 
-Módulo 02 - Aprofundando em layouts responsivos 
+---
 
-  - Desafio Final Projeto Instagram ✔️
+## 📌 Estrutura do Curso
 
-Módulo 03 - Introdução à Lógica de Programação 
+### 🖥️ 1ª Fase - Desenvolvimento Front-end
 
-  - Desafio Final Teste de Algoritmos e/ou Estruturas de Dados ✔️
+| Módulo | Conteúdo | Projeto Final |
+|--------|----------|---------------|
+| 01 | HTML e CSS | **Globo.com** ✔️ |
+| 02 | Layouts responsivos | **Instagram (HTML/CSS)** ✔️ |
+| 03 | Lógica de programação | **Teste de Algoritmos** ✔️ |
+| 04 | JavaScript básico | **Driven Eats** ✔️ |
+| 05 | DOM avançado | **Parrot Card Game** ✔️ |
+| 06 | APIs e AJAX | **Bate-Papo UOL** ✔️ |
+| 07 | Arrays e HOFs | **Teste de Algoritmos II** ✔️ |
+| 08 | React básico | **Instagram (React)** ✔️ |
+| 09 | React + Estado | **ZapRecall** ✔️ |
+| 10 | React + Rotas e APIs | **CineFlex** ✔️ |
+| 11 | React + Auth + Context API | **TrackIt** ✔️ |
 
-Módulo 04 - Adicionando interatividade com JavaScript 
+---
 
-  - Desafio Final Projeto Driven Eats ✔️
+### 🛠️ 2ª Fase - Back-end, APIs e Bancos de Dados
 
-Módulo 05 - Aprofundando em manipulação de DOM 
+| Módulo | Conteúdo | Projeto Final |
+|--------|----------|---------------|
+| 01 | Node.js e Express | **Feirinha** ✔️ |
+| 02 | MongoDB | **Tweeteroo** ✔️ |
+| 03 | Arquitetura MVC, autenticação | **MyWallet** ✔️ |
+| 04 | PostgreSQL, SQL | **LinkeDriven** ✔️ |
 
-  - Desafio Final Projeto Parrot Card Game ✔️
+---
 
-Módulo 06 - Tornando seu site dinâmico com APIs e AJAX
+## 🎓 Sobre a Driven Education
 
- - Desafio Final Projeto Bate-Papo UOL ✔️
+A **Driven** oferece uma formação intensiva, com foco prático, suporte constante e desenvolvimento de projetos reais. O curso é indicado mesmo para quem não tem experiência prévia em programação.
 
-Módulo 07 - Manipulando arrays e Higher-Order Functions
+---
 
- - Desafio Final Teste de Algoritmos e/ou Estruturas de Dados ✔️
+## 📁 Portfólio em andamento
 
-Módulo 08 - Construindo sua primeira aplicação em React
+Durante a formação, desenvolvi diversas aplicações que simulam cenários reais de mercado. Veja os repositórios individuais para cada projeto!
 
- - Desafio Final Projeto Instagram - React ✔️
-
-Módulo 09 - Aprofundando em gerenciamento de estado
-
- - Desafio Final Projeto ZapRecall ✔️
-
-Módulo 10 - Aprofundando em gerenciamento de estado
-
- - Desafio Final Projeto CineFlex ✔️
-
-Módulo 11 - Aprofundando em gerenciamento de estado
-
- - Desafio Final Projeto TrackIt ✔️
-
-Fase 2 - Back-ends, APIs e Bancos de Dados
-
-Módulo 01 - Construindo minha primeira API com Node
-
-- Desafio Final Projeto Feirinha ✔️
-
-Módulo 02 - Conectando APIs com Banco de Dados não relacionais
-
-- Desafio Final Projeto Tweeteroo ✔️
-
-Módulo 03 - Aprofundando em arquitetura back-end
-
-- Desafio Final Projeto MyWallet ✔️
-
-Módulo 04 - Trabalhando com SQL e Bancos de Dados relacionais
-
-- Desafio Final Projeto LinkeDriven ✔️
+---

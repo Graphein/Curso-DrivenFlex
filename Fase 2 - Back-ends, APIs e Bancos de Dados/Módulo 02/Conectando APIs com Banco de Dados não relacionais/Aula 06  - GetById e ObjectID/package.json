@@ -1,0 +1,20 @@
+{
+  "name": "cara-cracha-id",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "mongodb": "^6.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.1"
+  }
+}

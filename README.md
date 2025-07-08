@@ -52,22 +52,36 @@ Módulo 07 - Manipulando arrays e Higher-Order Functions
 
  - Desafio Final Teste de Algoritmos e/ou Estruturas de Dados ✔️
 
-
 Módulo 08 - Construindo sua primeira aplicação em React
 
  - Desafio Final Projeto Instagram - React ✔️
 
- 
 Módulo 09 - Aprofundando em gerenciamento de estado
 
  - Desafio Final Projeto ZapRecall ✔️
 
-  
 Módulo 10 - Aprofundando em gerenciamento de estado
 
  - Desafio Final Projeto CineFlex ✔️
 
-  
 Módulo 11 - Aprofundando em gerenciamento de estado
 
  - Desafio Final Projeto TrackIt ✔️
+
+Fase 2 - Back-ends, APIs e Bancos de Dados
+
+Módulo 01 - Construindo minha primeira API com Node
+
+- Desafio Final Projeto Feirinha ✔️
+
+Módulo 02 - Conectando APIs com Banco de Dados não relacionais
+
+- Desafio Final Projeto Tweeteroo ✔️
+
+Módulo 03 - Aprofundando em arquitetura back-end
+
+- Desafio Final Projeto MyWallet ✔️
+
+Módulo 04 - Trabalhando com SQL e Bancos de Dados relacionais
+
+- Desafio Final Projeto LinkeDriven ✔️

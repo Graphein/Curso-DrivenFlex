@@ -1,73 +1,89 @@
-O curso Full Stack da Driven Education (FLEN) é um programa intensivo e completo de desenvolvimento de software, voltado para preparar
-profissionais para o mercado de tecnologia, com foco em programação e construção de aplicações web. O curso é dividido em dois principais módulos:
+# 📚 Formação Full Stack - Driven Education (FLEN)
 
-Desenvolvimento Front-end:
+Este repositório documenta minha trajetória e os projetos desenvolvidos ao longo do curso Full Stack da **Driven Education**, uma formação intensiva e prática voltada ao desenvolvimento de aplicações web completas — do front ao back-end.
 
-Neste módulo, os alunos aprendem a criar interfaces de usuário (UI) interativas e responsivas. 
-São cobertos conceitos essenciais como HTML, CSS e JavaScript, além de frameworks modernos como React.js. 
-Há um foco em boas práticas de desenvolvimento, como a componentização e a organização do código.
+---
 
-Desenvolvimento Back-end:
+## 🧰 Tech Stack em Aprendizado
 
-No segundo módulo, o foco é no desenvolvimento de APIs e no gerenciamento de servidores e bancos de dados. 
-Os alunos aprendem a trabalhar com Node.js, Express, e MongoDB, além de outras ferramentas essenciais 
-para criar a lógica de negócio e o funcionamento por trás das aplicações.
-Além das tecnologias, o curso também inclui:
+### ✅ Já aprendidas:
+- **Front-end**: HTML5, CSS3, JavaScript, DOM, AJAX, React.js, React Router, Context API, Single-Page Applications.
+- **Back-end**: Node.js, Express, MongoDB (Mongoose), PostgreSQL (SQL), Autenticação com JWT, Hash com Bcrypt, Validação com Joi, Arquitetura MVC.
+- **Ferramentas & Práticas**: Git, GitHub, CI/CD, Vercel, Render, Scrum, Kanban.
 
-Controle de versionamento com Git e GitHub.
+### ⏳ Em andamento / previstos:
+- TypeScript
+- ORMs (Prisma)
+- Testes Unitários e de Integração (Jest, Supertest)
+- Orientação a Objetos
+- Clean Code
+- Algoritmos avançados e análise de complexidade
+- Deploy de aplicações em produção
+- Trabalho em equipe com metodologias ágeis
 
-Integração e deploy contínuos, possibilitando que os alunos aprendam a colocar suas aplicações no ar, utilizando serviços de hospedagem e cloud.
-Desenvolvimento ágil, onde os alunos trabalham em projetos reais com base em metodologias ágeis, como Scrum.
-Ao final do curso, os alunos terão trabalhado em projetos práticos que demonstram todas as etapas de desenvolvimento de uma aplicação full stack, desde o front-end até o back-end, culminando em um portfólio profissional.
+---
 
-O curso tem uma abordagem prática, com feedback constante e suporte da equipe da Driven, e é destinado a quem deseja entrar rapidamente no mercado de tecnologia, mesmo sem conhecimento prévio em programação.
+## 📌 Estrutura e Progresso no Curso
 
-1º Fase - Desenvolvimento Front-end
+### 🖥️ Fase 1 - Front-end
 
-Módulo 01 - Construindo meu primeiro site com HTML e CSS 
+| Módulo | Conteúdo | Projeto Final | Aulas | Exercícios | Status |
+|--------|----------|---------------|--------|-------------|--------|
+| 01 | HTML e CSS | Globo.com | 15 | 11 | ✅ |
+| 02 | Layouts Responsivos | Instagram (HTML/CSS) | 14 | 8 | ✅ |
+| 03 | Lógica de Programação | Teste de Algoritmos | 9 | 21 | ✅ |
+| 04 | JavaScript Interativo | Driven Eats | 14 | 8 | ✅ |
+| 05 | Manipulação de DOM | Parrot Card Game | 10 | 6 | ✅ |
+| 06 | APIs e AJAX | Bate-Papo UOL | 9 | 6 | ✅ |
+| 07 | Arrays e HOFs | Teste de Algoritmos | 12 | 32 | ✅ |
+| 08 | React básico | Instagram React | 13 | 10 | ✅ |
+| 09 | Estado no React | ZapRecall | 12 | 8 | ✅ |
+| 10 | SPA e Rotas | CineFlex | 4 | 4 | ✅ |
+| 11 | Estado complexo + Auth | TrackIt | 6 | 2 | ✅ |
 
-  - Desafio Final Projeto Globo.com ✔️
+---
 
-Módulo 02 - Aprofundando em layouts responsivos 
+### 🛠️ Fase 2 - Back-end
 
-  - Desafio Final Projeto Instagram ✔️
+| Módulo | Conteúdo | Projeto Final | Aulas | Exercícios | Status |
+|--------|----------|---------------|--------|-------------|--------|
+| 01 | Node.js + Express | Feirinha | 10 | 9 | ✅ |
+| 02 | MongoDB | Tweeteroo | 10 | 8 | ✅ |
+| 03 | Arquitetura Back-end | MyWallet | 9 | 8 | ✅ |
+| 04 | PostgreSQL e SQL | LinkeDriven | 7 | 5 | ⏳ Em andamento |
+| 05 | SQL Avançado | Boardcamp | 6 | 5 | 🔒 Bloqueado |
+| 06 | Modelagem de Dados | BlockDriven | 10 | 6 | 🔒 Bloqueado |
 
-Módulo 03 - Introdução à Lógica de Programação 
+---
 
-  - Desafio Final Teste de Algoritmos e/ou Estruturas de Dados ✔️
+### 🧪 Módulos Avançados (Fase 3 e 4)
 
-Módulo 04 - Adicionando interatividade com JavaScript 
+| Módulo | Tema | Projeto | Status |
+|--------|------|---------|--------|
+| Algoritmos (loop, simulação, hash, busca binária etc) | Testes diversos | 🔒 Bloqueado |
+| TypeScript | Driven Recharge | 🔒 Bloqueado |
+| ORMs e Banco Relacional | DrivenPass | 🔒 Bloqueado |
+| Testes de Integração | MyTickets | 🔒 Bloqueado |
+| Testes Unitários | Milhas | 🔒 Bloqueado |
+| Orientação a Objetos | Feirinha OO, Boardcamp OO | 🔒 Bloqueado |
+| Clean Code | Refatoração | 🔒 Bloqueado |
+| Deploy em Produção | Bingo Driven | 🔒 Bloqueado |
+| Metodologias Ágeis | Linkr (projeto em equipe) | 🔒 Bloqueado |
 
-  - Desafio Final Projeto Driven Eats ✔️
+---
 
-Módulo 05 - Aprofundando em manipulação de DOM 
+## 🧳 Portfólio Pessoal
 
-  - Desafio Final Projeto Parrot Card Game ✔️
+Durante a formação, desenvolvi diversos projetos práticos com aplicação real de conceitos. Repositórios dos projetos estão disponíveis separadamente no meu perfil do GitHub.
 
-Módulo 06 - Tornando seu site dinâmico com APIs e AJAX
+---
 
- - Desafio Final Projeto Bate-Papo UOL ✔️
+## 🎓 Sobre a Driven Education
 
-Módulo 07 - Manipulando arrays e Higher-Order Functions
+A **Driven** é uma escola de tecnologia com metodologia prática, imersiva e guiada por profissionais do mercado. O curso full stack é indicado mesmo para quem inicia do zero e deseja ingressar rapidamente no mercado de tecnologia.
 
- - Desafio Final Teste de Algoritmos e/ou Estruturas de Dados ✔️
+---
 
+## 📬 Contato
 
-Módulo 08 - Construindo sua primeira aplicação em React
-
- - Desafio Final Projeto Instagram - React ✔️
-
- 
-Módulo 09 - Aprofundando em gerenciamento de estado
-
- - Desafio Final Projeto ZapRecall ✔️
-
-  
-Módulo 10 - Aprofundando em gerenciamento de estado
-
- - Desafio Final Projeto CineFlex ✔️
-
-  
-Módulo 11 - Aprofundando em gerenciamento de estado
-
- - Desafio Final Projeto TrackIt ✔️
+Fique à vontade para entrar em contato comigo por [LinkedIn](https://www.linkedin.com/in/eduardoleli/) ou através do GitHub para ver mais projetos.

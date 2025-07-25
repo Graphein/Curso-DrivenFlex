@@ -1,0 +1,25 @@
+import { db } from "../database/db.js";
+
+export async function findAllProducts() {
+    const products = await db.query("SELECT * FROM produtos");
+    return products.rows;
+}
+
+export async function searchProductByName(nome) {
+    const product = await db.query(`SELECT * FROM produtos WHERE nome=$1;`, [nome])
+    return product
+}
+
+export async function createProduct(nome, preco, condicao) {
+    const newProduct = await db.query(
+      `INSERT INTO produtos (nome, preco, condicao) VALUES ($1, $2, $3);`,
+      [nome, preco, condicao]
+    );
+    return newProduct.rows;
+}
+
+export const productsRepository = {
+    findAllProducts,
+    searchProductByName,
+    createProduct
+};

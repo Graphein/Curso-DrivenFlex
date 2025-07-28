@@ -1,0 +1,16 @@
+CREATE DATABASE drivengram;
+CREATE TABLE users (
+	id SERIAL PRIMARY KEY,
+	name TEXT NOT NULL,
+	cpf VARCHAR(11) NOT NULL,
+	email TEXT NOT NULL UNIQUE,
+	password TEXT NOT NULL
+);
+CREATE TABLE posts (
+	id SERIAL PRIMARY KEY,
+	description TEXT,
+	"imageUrl" TEXT NOT NULL,
+	"userId" INTEGER REFERENCES users(id),
+	"datePosted" TIMESTAMP NOT NULL DEFAULT NOW(),
+	active BOOLEAN NOT NULL DEFAULT false
+);

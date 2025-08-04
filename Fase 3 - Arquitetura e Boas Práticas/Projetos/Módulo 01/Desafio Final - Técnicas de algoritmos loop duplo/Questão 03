@@ -1,0 +1,19 @@
+function distanciaMinima(a) {
+  const ultimoIndice = {};
+  let menorDistancia = Infinity;
+
+  for (let i = 0; i < a.length; i++) {
+    const valor = a[i];
+
+    if (valor in ultimoIndice) {
+      const distancia = i - ultimoIndice[valor];
+      if (distancia < menorDistancia) {
+        menorDistancia = distancia;
+      }
+    }
+
+    ultimoIndice[valor] = i;
+  }
+
+  return menorDistancia === Infinity ? -1 : menorDistancia;
+}

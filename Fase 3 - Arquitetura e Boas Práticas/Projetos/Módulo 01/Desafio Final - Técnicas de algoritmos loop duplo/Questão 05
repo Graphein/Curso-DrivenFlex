@@ -1,0 +1,13 @@
+function contarPares(tempos, k) {
+    let contador = 0;
+
+    for (let i = 0; i < tempos.length; i++) {
+        for (let j = i + 1; j < tempos.length; j++) {
+            if ((tempos[i] + tempos[j]) % k === 0) {
+                contador++;
+            }
+        }
+    }
+
+    return contador;
+}

@@ -1,0 +1,17 @@
+function dividirChocolate(choco, dia, mes) {
+    let count = 0;
+
+    for (let i = 0; i <= choco.length - mes; i++) {
+        let soma = 0;
+
+        for (let j = 0; j < mes; j++) {
+            soma += choco[i + j];
+        }
+
+        if (soma === dia) {
+            count++;
+        }
+    }
+
+    return count;
+}

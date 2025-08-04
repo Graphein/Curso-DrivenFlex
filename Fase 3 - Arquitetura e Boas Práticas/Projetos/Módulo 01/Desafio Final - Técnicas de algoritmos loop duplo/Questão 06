@@ -1,0 +1,19 @@
+function calcularRankings(ranking, pontuacoesJogador) {
+    // Remove duplicatas e ordena decrescentemente
+    const rankingUnico = [...new Set(ranking)].sort((a, b) => b - a);
+    const resultado = [];
+
+    let i = rankingUnico.length - 1;
+
+    for (let pontuacao of pontuacoesJogador) {
+        // Sobe no ranking enquanto a pontuação for maior ou igual ao atual
+        while (i >= 0 && pontuacao >= rankingUnico[i]) {
+            i--;
+        }
+
+        // A posição é o índice + 2, pois estamos depois do último menor
+        resultado.push(i + 2);
+    }
+
+    return resultado;
+}

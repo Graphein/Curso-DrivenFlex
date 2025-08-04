@@ -1,0 +1,20 @@
+function tipoMaisAvistado(passaros) {
+  if (!passaros || passaros.length === 0) return -1;
+
+  const freq = {};
+  let maxFreq = 0;
+  let menorId = Infinity;
+
+  for (let id of passaros) {
+    freq[id] = (freq[id] || 0) + 1;
+
+    if (freq[id] > maxFreq) {
+      maxFreq = freq[id];
+      menorId = id;
+    } else if (freq[id] === maxFreq && id < menorId) {
+      menorId = id;
+    }
+  }
+
+  return menorId === Infinity ? -1 : menorId;
+}

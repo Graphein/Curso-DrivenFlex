@@ -1,0 +1,23 @@
+function escolhendoNumeros(a) {
+    let maxLength = 0;
+    
+    // Itera por todos os elementos como ponto de partida
+    for (let i = 0; i < a.length; i++) {
+        let min = a[i];
+        let max = a[i];
+        let currentLength = 1;
+        
+        for (let j = i + 1; j < a.length; j++) {
+            min = Math.min(min, a[j]);
+            max = Math.max(max, a[j]);
+            
+            if (max - min > 1) {
+                break;
+            }
+            currentLength++;
+        }
+        maxLength = Math.max(maxLength, currentLength);
+    }
+    
+    return maxLength;
+}

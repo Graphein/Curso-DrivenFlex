@@ -1,0 +1,19 @@
+function maiorSequenciaComum(muro1, muro2) {
+    const n = muro1.length;
+    const m = muro2.length;
+    let max = 0;
+
+    // Cria uma matriz (n+1) x (m+1) preenchida com 0
+    const dp = Array.from({ length: n + 1 }, () => Array(m + 1).fill(0));
+
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= m; j++) {
+            if (muro1[i - 1] === muro2[j - 1]) {
+                dp[i][j] = dp[i - 1][j - 1] + 1;
+                max = Math.max(max, dp[i][j]);
+            }
+        }
+    }
+
+    return max;
+}

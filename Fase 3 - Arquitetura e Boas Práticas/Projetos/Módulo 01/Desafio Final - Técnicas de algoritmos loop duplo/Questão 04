@@ -1,0 +1,12 @@
+function larguraMaxCarro(larguras, entradasSaidas) {
+    const resultado = [];
+
+    for (let i = 0; i < entradasSaidas.length; i++) {
+        const [entrada, saida] = entradasSaidas[i];
+        const trecho = larguras.slice(entrada, saida + 1);
+        const menorLargura = Math.min(...trecho);
+        resultado.push(menorLargura);
+    }
+
+    return resultado;
+}

@@ -1,0 +1,15 @@
+function maxLucro(precos) {
+  let precoMinimo = Infinity;
+  let lucroMax = 0;
+
+  for (let preco of precos) {
+    if (preco < precoMinimo) {
+      precoMinimo = preco; // Atualiza o menor preço
+    } else {
+      const lucro = preco - precoMinimo;
+      lucroMax = Math.max(lucroMax, lucro);
+    }
+  }
+
+  return lucroMax;
+}

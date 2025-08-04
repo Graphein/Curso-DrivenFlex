@@ -1,0 +1,8 @@
+function usarMagia(danoBase, limiteDefesa) {
+  for (let ataque = danoBase; ataque <= limiteDefesa; ataque++) {
+    for (let defesa = ataque; defesa <= limiteDefesa; defesa++) {
+      const resultado = ataque * defesa;
+      console.log(`${ataque} x ${defesa} = ${resultado}`);
+    }
+  }
+}

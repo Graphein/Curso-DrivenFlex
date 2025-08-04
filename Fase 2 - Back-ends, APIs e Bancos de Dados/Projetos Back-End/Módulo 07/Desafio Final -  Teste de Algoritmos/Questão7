@@ -1,0 +1,13 @@
+function distanciaMaxima(tanquePrincipal, tanqueAdicional) {
+  let litrosConsumidos = 0;
+
+  while (tanquePrincipal > 0) {
+    tanquePrincipal--;
+    litrosConsumidos++;
+    if (litrosConsumidos % 4 === 0 && tanqueAdicional >= 4) {
+      tanquePrincipal += 4;
+      tanqueAdicional -= 4;
+    }
+  }
+  return litrosConsumidos * 8;
+}

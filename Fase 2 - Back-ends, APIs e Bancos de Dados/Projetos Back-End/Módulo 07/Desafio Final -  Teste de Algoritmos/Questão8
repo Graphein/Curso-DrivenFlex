@@ -1,0 +1,14 @@
+function itensComprados(listaItens, listaPrecos, dinheiro) {
+  const comprados = [];
+
+  for (let i = 0; i < listaItens.length; i++) {
+    const preco = listaPrecos[i];
+
+    if (preco <= dinheiro) {
+      comprados.push(listaItens[i]);
+      dinheiro -= preco;
+    }
+  }
+
+  return comprados;
+}

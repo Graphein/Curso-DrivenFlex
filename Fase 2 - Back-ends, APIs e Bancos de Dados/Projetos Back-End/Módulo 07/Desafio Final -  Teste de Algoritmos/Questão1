@@ -1,0 +1,6 @@
+function converterDatas(listaDatas) {
+  return listaDatas.map(data => {
+    const [mes, dia, ano] = data.split('-');
+    return `${dia}/${mes}/${ano}`;
+  });
+}

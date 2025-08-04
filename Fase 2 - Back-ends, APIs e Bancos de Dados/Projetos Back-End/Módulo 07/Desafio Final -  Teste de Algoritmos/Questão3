@@ -1,0 +1,17 @@
+function padraoXadrez(tamanho) {
+  const preto = '⬛';
+  const branco = '⬜';
+
+  for (let linha = 0; linha < tamanho; linha++) {
+    let linhaTexto = '';
+
+    for (let coluna = 0; coluna < tamanho; coluna++) {
+      if ((linha + coluna) % 2 === 0) {
+        linhaTexto += preto;
+      } else {
+        linhaTexto += branco;
+      }
+    }
+    console.log(linhaTexto);
+  }
+}

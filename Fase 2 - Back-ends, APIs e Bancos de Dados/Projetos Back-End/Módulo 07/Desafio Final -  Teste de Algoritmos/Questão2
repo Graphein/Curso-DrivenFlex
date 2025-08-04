@@ -1,0 +1,11 @@
+function contarPalavras(frase) {
+  const limpa = frase.replace(/[.,!?]/g, '').toLowerCase();
+  const palavras = limpa.split(/\s+/);
+  const contagem = {};
+  for (const palavra of palavras) {
+    if (palavra === '') continue;
+    contagem[palavra] = (contagem[palavra] || 0) + 1;
+  }
+
+  return contagem;
+}

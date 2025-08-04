@@ -1,0 +1,11 @@
+function mapearArquipelago(ilhas, cores)  {
+  const combinacoes = [];
+
+  for (const ilha of ilhas) {
+    for (const cor of cores) {
+      combinacoes.push([ilha, cor]);
+    }
+  }
+
+  return combinacoes;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "typescript-02",
+  "version": "1.0.0",
+  "description": "Exercício 02 do curso de TypeScript",
+  "main": "./src/index.ts",
+  "scripts": {
+    "build": "tsc index.ts",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

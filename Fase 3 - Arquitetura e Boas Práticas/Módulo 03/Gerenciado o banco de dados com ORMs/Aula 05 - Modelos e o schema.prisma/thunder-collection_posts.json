@@ -1,0 +1,42 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "posts",
+    "dateExported": "2023-05-04T21:39:30.318Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "90ec6cc3-dd0e-4755-ac02-a5ad333168bd",
+            "colId": "3c9cb183-1d91-4732-a2cd-e77e3d6a3401",
+            "containerId": "",
+            "name": "GET /posts",
+            "url": "http://localhost:5000/posts",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-05-04T20:39:03.599Z",
+            "modified": "2023-05-04T20:39:16.460Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "07d4c8e7-a1e6-4973-b151-74f0fe733801",
+            "colId": "3c9cb183-1d91-4732-a2cd-e77e3d6a3401",
+            "containerId": "",
+            "name": "POST /posts ",
+            "url": "http://localhost:5000/posts",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-05-04T20:39:22.898Z",
+            "modified": "2023-05-04T21:23:02.680Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"Diego\",\n  \"title\": \"Hello\",\n  \"body\": \"World\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

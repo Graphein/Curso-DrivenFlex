@@ -1,0 +1,50 @@
+{
+  "name": "vai-de-milhas",
+  "version": "1.0.0",
+  "description": "Vai de Milhas como projeto para formação da DrivenFlex.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run migration:run && npm run seed && node dist/src/server.js",
+    "dev": "ts-node-dev src/server.ts",
+    "migration:run": "prisma migrate deploy",
+    "seed": "prisma db seed",
+    "test:load-envs": "dotenv -e .env.test",
+    "test": "npm run test:load-envs -- jest -- --runInBand",
+    "test:coverage": "npm run test -- --coverage",
+    "test:integration": "npm run test:load-envs -- jest tests/integration -- --runInBand",
+    "test:integration:coverage": "npm run test:integration -- --coverage",
+    "test:integration:migration:run": "npm run test:load-envs prisma migrate deploy",
+    "test:unit": "jest tests/unit",
+    "test:unit:coverage": "npm run test:unit -- --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "express": "^4.19.2",
+    "express-async-errors": "^3.1.1",
+    "http-status": "^1.7.4",
+    "joi": "^17.13.3",
+    "tsx": "^4.16.2",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20.14.9",
+    "@types/pg": "^8.11.6",
+    "@types/supertest": "^6.0.2",
+    "dotenv": "^17.2.3",
+    "dotenv-cli": "^7.4.2",
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.4",
+    "prisma": "^5.16.1",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.4.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.2"
+  }
+}

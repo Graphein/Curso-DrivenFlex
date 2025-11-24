@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "6ac6a4b9-2492-4336-9436-0fe0fe23bf7e",
+		"name": "✈️ Milhas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19694080"
+	},
+	"item": [
+		{
+			"name": "miles",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"ABC124\",\r\n  \"origin\": {\r\n    \"lat\": 40.7128,\r\n    \"long\": -74.006\r\n  },\r\n  \"destination\": {\r\n    \"lat\": 34.0522,\r\n    \"long\": -118.2437\r\n  },\r\n  \"miles\": false,\r\n  \"plane\": \"Boeing 747\",\r\n  \"service\": \"EXECUTIVE\",\r\n  \"affiliate\": \"GOLD\",\r\n  \"date\": \"2024-07-17\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/miles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"miles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "miles/:code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/miles/ABC124",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"miles",
+						"ABC124"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

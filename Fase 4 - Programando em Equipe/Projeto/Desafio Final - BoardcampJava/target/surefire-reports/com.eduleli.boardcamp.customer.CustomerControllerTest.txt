@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.eduleli.boardcamp.customer.CustomerControllerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.633 s -- in com.eduleli.boardcamp.customer.CustomerControllerTest
